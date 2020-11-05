@@ -1,0 +1,1279 @@
+:root{
+
+
+    --color-fondo: white;
+
+    --color-principal:#4a4474;
+    --color-principal-claro:#685fa1;
+
+
+    --acento-claro:#e45b6d;
+    --acento-oscuro:crimson;
+
+    --color-textos:rgb(68, 67, 67);
+    --color-titulos:black;
+
+    --fuentes-textos: 'Nunito',sans-serif;
+    --fuentes-titulos: 'Faustina';
+
+    
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/*Le quito los estilos feos a los links y li*/
+
+a{
+
+    text-decoration: none;
+
+}
+
+
+
+li{
+
+    list-style: none;
+
+}
+
+
+/*Estilos de mi boton de menu hamburguesa*/
+
+.hamburguesa{
+
+    display: inline-block;
+    font-size: 30px;
+    position: fixed;
+    top: 0px;
+    right: -100px;
+    z-index: 300;
+    background-color: var(--acento-claro);
+    border-radius: 50%;
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin-right:30px;
+    margin-top: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+/*Estilos del contenedor inicial (header+inicio)*/
+.contenedor-inicio{
+
+    background-color: var(--color-principal);
+    
+
+
+}
+
+
+
+/*Estilos de mi header*/
+
+.header{
+padding: 1em;
+padding-top: 0.9em;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 0.8rem;
+
+
+}
+
+/*Clase para el header sticky*/
+
+
+.cambio{
+
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    background-color: white;
+    border-bottom: var(--acento-claro) solid 1px;
+    width: 100vw;
+    padding-right: 1.8rem;
+    
+
+}
+
+.cambio > nav > a {
+
+    color: var(--color-principal);
+
+    
+}
+
+.cambio .boton{
+
+    background-color: var(--acento-claro);
+    border-color: white;
+    color: white;
+
+    
+}
+
+.cambio .boton:hover{
+
+    border-color: var(--color-principal);
+
+    
+}
+
+
+.cambio > figure > h1, .cambio > figure > h2{
+
+    color: var(--color-principal);
+
+}
+
+
+
+/*conjunto de imagen y texto de la marca*/
+.marca{
+
+    width: 30%;
+    margin-top: 1em;
+    margin-left: 1em;
+    position: relative;
+
+}
+
+/*Estilos de mi logo uno*/
+.logo-1>img{
+
+    width: 100%;
+    height: auto;
+
+}
+
+.logo-1{
+
+    width: 6em;
+    float:left;
+
+}
+
+/*alquimify*/
+.marca>h2{
+
+    color: white;
+    font-family: 'Grandstander', Arial, Helvetica, sans-serif;
+    font-size: 2.7em;
+    margin-top: 0.1em;
+    position: absolute;
+    left: 2.6em;
+
+}
+
+/*Marketing Digital*/
+
+.marca>h1{
+
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 8.8em;
+    top: 3em;
+}
+
+/*Estilos de mi menu principal*/
+
+.menu-principal{
+
+    margin-right: 3em;
+
+
+}
+
+.menu-principal>a{
+
+    margin-right: 3em;
+    color: white;
+    font-family: 'Nunito',sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+
+
+}
+
+.menu-principal>a:hover{
+
+        color: var(--color-boton-oscuro);
+
+}
+
+
+
+/*Estilos iniciales para los botones, después en cada uno se modifican detalles*/
+
+.boton{
+
+    display: inline-block;
+    font-family: 'Nunito',sans-serif;
+    font-weight: 800;
+    color: white;
+    padding: 0.9em;
+    /*border: solid;*/
+    /*border-width: 2px;*/
+    background-color: var(--acento-claro);
+    border-radius: 34px;
+    
+
+}
+
+nav>.boton:hover{
+
+    background-color: white;
+    color: var(--acento-oscuro);
+}
+
+    /*Empiezan los estilos de la parte de inicio*/
+
+    
+.inicio{
+
+    width:100%;
+    padding-top: 30px;
+    padding-left: 110px;
+    min-height: 100vh;
+
+}
+
+.inicio>span{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 1.2em;
+
+}
+
+.inicio>h2{
+
+    margin-top: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+    max-width: 40%;
+    color: white;
+
+}
+
+.inicio>p{
+
+    margin-top: 25px;
+    font-family: 'Nunito',sans-serif;
+    color: white;
+    max-width: 50%;
+    font-size: 1em;
+}
+
+.boton2{
+
+    font-size: 22px;
+    margin-top: 45px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+
+}
+
+.boton2:hover{
+
+    background-color: white;
+    color: var(--acento-oscuro);
+}
+
+/*Empieza la seccion soy una empresa*/
+
+.empresa{
+
+    background-color: var(--color-fondo);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 5em;
+    padding-bottom: 6em;
+    border-bottom: solid 1px var(--color-principal);
+}
+
+.imagen-1{
+    display:inline-block;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.imagen-1>img{
+
+    width: 60%;
+    height: auto;
+
+
+
+}
+
+.empresa div{
+
+    display: inline-block;
+    width: 50%;
+    padding-right: 3rem;
+
+
+}
+
+.empresa h3{
+
+    font-family: var(--fuentes-titulos);
+    font-weight: 500;
+    font-size: 2.7em;
+    color: var(--color-titulos);
+    width: 100%;
+    text-align: end;
+    margin-bottom: 15px;
+    
+
+}
+
+.empresa li{
+
+    font-family: var(--fuentes-textos);
+    font-size: 1.1em;
+    position: relative;
+    line-height: 4rem;
+    color: var(--color-textos);
+    text-align: end;
+    padding-right: 4rem;
+    
+
+}
+
+.empresa-1::after{
+
+    content: "";
+    display: block;
+    background-color: var(--color-principal-claro);
+    margin-right: 4rem;
+    width: 6px;
+    height: 300px;
+    position: absolute;
+    right: -60px;
+    top: 1px;
+
+}
+
+
+/*Estilos de la zona de soy un profesional*/
+
+.profesional{
+
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-fondo);
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+
+}
+
+.profesional>div{
+
+    width: 50%;
+    padding-top: 4rem;
+
+
+}
+
+.profesional h3{
+
+    font-family: var(--fuentes-titulos);
+    font-weight: 500;
+    font-size: 2.7em;
+    color: var(--color-titulos);
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 40px;
+    
+
+}
+
+.profesional li{
+
+    font-family: var(--fuentes-textos);
+    font-size: 1.1em;
+    position: relative;
+    line-height: 4rem;
+    color: var(--color-textos);
+    margin-left: 4em;
+    
+
+}
+
+.profesional-1::before{
+
+    content: "";
+    display: block;
+    background-color: var(--acento-claro);
+    margin-right: 4rem;
+    width: 6px;
+    height: 185px;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+
+}
+
+.imagen-2{
+    display: inline-block;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imagen-2>img{
+
+    width: 65%;
+    height: auto;
+
+
+}
+
+
+/*Empiezan los estilos de mi aside*/
+
+
+aside{
+
+
+    background-color: var(--color-fondo);
+    padding-bottom: 5rem;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+/*Estilos de mi call to action*/
+
+
+.invitacion{
+
+    display: inline-block;
+    display: flex;
+
+    justify-content: space-between;
+
+    background: white;
+    width: 80%;
+    margin-top: 2.5rem;
+    padding: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 4rem;
+
+    box-shadow: 0 0 1.25rem grey;
+
+}
+
+.conjunto{
+
+    max-width: 70%;
+
+}
+.conjunto>h3{
+
+    font-family: 'Nunito',Arial,sans-serif;
+    margin-bottom: 1rem;
+    color: var(--color-titulos);
+
+}
+
+.conjunto>p{
+
+    font-family: var(--fuentes-textos);
+    max-width: 85%;
+    color: var(--color-textos);
+
+}
+
+.boton3{
+
+    display: inline-block;
+    display: flex;
+    width: 13rem;
+    color: white;
+    background-color: var(--acento-claro);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 0 0 15px grey;
+    height: max-content;
+    align-self: center;
+    text-align: center;
+
+
+}
+
+.boton3:hover{
+
+    background-color: var(--acento-oscuro);
+
+}
+
+.boton3:active{
+
+    box-shadow: none;
+
+}
+
+/*Empiezan estilos del footer*/
+
+    .footer{
+
+    background-color: var(--color-principal);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    padding-right: 2em;
+    padding-left: 2em;
+
+    }
+
+    .logo-2{
+
+    width: 12%;
+    height: auto;
+
+    }
+
+    .logo-2 img{
+
+    max-width: 85%;
+    height: auto;
+
+    }
+
+    .texto-footer{
+
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-right: 4.5em;
+        padding-left: 2em;
+    
+    }
+
+    .texto-footer a{
+
+        color: white;
+
+    }
+
+    .derechos{
+
+        font-size: 1em;
+        font-family: 'Verdana';
+        color: white;
+
+    }
+
+    .creditos{
+
+        font-size: 1em;
+        font-family: 'Verdana';
+        
+    }
+
+    .sociales{
+
+        width: 28%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around
+        
+
+    }
+
+    .sociales > [class^="icon-"]{
+
+        font-size: 4.2em;
+        color: white;
+
+    }
+
+    .sociales span{
+
+        color: white;
+        font-family: 'Nunito';
+        font-size: 1.3em;
+        font-weight: 600;
+
+    }
+
+
+
+                /*Empiezan mis media querys*/
+                
+    /*Ajustes de tamaño en zona profesionales*/
+
+    @media screen and (max-width: 1068px){
+
+        .profesional{
+
+            font-size: 0.99rem;
+
+        }
+
+        .profesional>div{
+
+            width: 60%;
+
+        }
+
+        .imagen-2{
+
+            width: 40%;
+
+        }
+
+        .imagen-2>img{
+
+            width: 80%;
+
+        }
+
+    }
+
+    /*Ajustes de espacio del footer*/
+
+    @media screen and (max-width: 1027px){
+
+        .texto-footer{
+
+            width: 50%;
+
+        }
+
+        .sociales{
+
+            width: 38%;
+
+        }
+
+        .sociales span{
+
+            margin-top: 0.6em;
+        
+           }
+
+
+    }
+
+    /*Pequeño ajuste del texto para que no se vea feo*/
+    @media screen and (max-width: 1013px){
+
+    .inicio{
+
+        font-size: 0.8rem;
+
+    }
+
+}
+
+/*Ajustes de tamaño de imagen en zona de empresa*/
+
+
+@media screen and (max-width: 983px){
+
+    .empresa div{
+
+        width: 60%;
+
+    }
+
+    .empresa .imagen-1{
+
+        width: 40%;
+
+
+    }
+
+    .imagen-1 img{
+
+        width: 75%;
+
+
+    }
+
+
+}
+
+
+
+/* ponemos el menu hacia la derecha para que no se pegue al logo*/
+@media screen and (max-width: 950px){
+
+   .menu-principal{
+
+    margin-right: 0px;
+
+   }
+
+
+}
+
+
+
+/*A partir de este tamaño el menu  pasa a ser un menu de hamburguesa*/
+
+@media screen and (max-width: 920px){
+
+    .menu-principal{
+        display: flex;
+        position: fixed;
+        top: -100vh;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color:  rgba(74,68,116,0.95);
+        z-index: 200;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        transition: 0.9s;
+    }
+
+    .menu-principal.visible{
+
+        top: 0px;
+
+    }
+
+
+    .menu-principal a{
+
+        font-size: 2em;
+        margin-right: 0px;
+
+
+    }
+
+    .cambio > nav > a {
+
+        color: white;
+        margin-right: 0px;
+    }
+
+    .hamburguesa{
+
+        right: 0px;
+
+    }
+
+}
+
+    /*Quitamos el exceso de padding en la zona de invitacion para que entre mejor el contenido*/
+
+    @media screen and (max-width: 906px){
+
+    .invitacion{
+
+        padding-right: 1em;
+        justify-content: center;
+
+    }
+    
+    .conjunto{
+
+        max-width: 60%;
+
+    }
+
+    .conjunto p, .conjunto h3{
+
+        text-align: center;
+        max-width: 90%;
+
+    }
+
+    }
+
+
+
+    /*Zona de profesionales, pasamos a que la imagen y contenido esten uno abajo de otro*/
+
+    @media screen and (max-width: 880px){
+
+        .profesional{
+
+            padding-bottom: 1em;
+            padding-top: 1em;
+
+        }
+
+        .profesional>div{
+
+            width: 100%;
+
+        }
+
+        .profesional h3{
+
+            text-align: center;
+            padding-left: 0px;
+
+        }
+
+        .profesional li{
+
+            text-align: center;
+            margin-left: 0px;
+
+        }
+
+        .imagen-2{
+
+            width: 100%;
+        }
+
+        .imagen-2>img{
+
+            width: 50%;
+
+        }
+
+    }
+
+    /*Ajustes de texto en la zona inicio */
+
+    @media screen and (max-width: 832px){
+
+        .inicio>h2{
+
+            max-width: 60%;
+
+        }
+
+        .inicio>p{
+
+            max-width: 65%;
+
+        }
+
+
+    }
+
+    /*A partir de esta resolucion para abajo le quitamos tamaño de fuente en zona empresa*/
+
+    @media screen and (max-width: 819px){
+
+        .empresa{
+
+            font-size: 0.9rem;
+
+        }
+
+
+    }
+
+    /*La zona empresa pasa a tener la imagen encima del contenido*/
+
+    @media screen and (max-width: 790px){
+
+
+        .empresa div{
+
+            width: 100%;
+            padding-right: 0px;
+            text-align: center;
+            font-size: 1rem;
+
+        }
+        
+        .empresa .imagen-1{
+
+            width: 100%;
+
+        }
+
+        .imagen-1 img{
+
+            width: 45%;
+
+        }
+
+        .empresa div li{
+            display: block;
+            margin-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+        }
+
+        .empresa h3{
+
+            display: block;
+            text-align: center;
+            font-size: 3.1em;
+
+        }
+
+        .empresa-1::after{
+
+            opacity: 0;
+
+        }
+
+    }
+
+    /*Ajustes de espacio en el footer*/
+
+    @media screen and (max-width: 770px){
+
+        .texto-footer{
+
+            padding-right: 1em;
+            width: 45%;
+
+        }
+
+        .sociales{
+
+            width: 43%;
+
+        }
+
+        
+
+
+    }
+
+
+    /*El boton del call to action pasa a estar debajo del texto*/
+
+    @media screen and (max-width: 712px){
+
+
+        .invitacion{
+
+           flex-wrap: wrap;
+            
+
+        }
+
+        .conjunto{
+
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 2em;
+
+        }
+
+        .conjunto p, .conjunto h3{
+
+            max-width: 100%;
+
+        }
+
+    }
+
+    /*La zona de redes sociales pasa a estar abajo en el footer*/
+
+    @media screen and (max-width: 699px){
+
+        .logo-2{
+
+            width: 25%;
+
+        }
+
+        .logo-2 img{
+
+            max-width: 6em;
+        }
+
+        .texto-footer{
+
+            width: 75%;
+            font-size: 1em;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .sociales{
+
+            margin-top: 2em;
+            width: 100%;
+            justify-content: center;
+
+        }
+
+        .sociales [class^="icon-"]{
+
+            font-size: 3em;
+            margin-right: 0.5em;
+            margin-left: 0.5em;
+
+        }
+
+    }
+
+        /*Ajustes de texto y centrado en la zona inicio */
+
+        @media screen and (max-width: 591px){
+
+            .inicio{
+
+                padding-left: 0px;
+
+
+            }
+
+            .inicio>span{
+    
+                max-width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+
+            .inicio>h2{
+    
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+    
+            .inicio>p{
+    
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+
+            .boton2{
+
+                display: block;
+                width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+                
+
+            }
+    
+    
+        }
+
+    /*Evitamos que el texto toque los bordes, y ajuste de imagen*/
+
+    @media screen and (max-width: 490px){
+
+        .profesional{
+
+            font-size: 0.9rem;
+
+        }
+
+        .imagen-2>img{
+
+            width: 60%;
+
+        }
+
+    }
+
+    /*Ajuste de tamaño de texto en zona empresa*/
+
+    @media screen and (max-width: 472px){
+
+        .empresa div{
+
+            font-size: 0.9rem;
+
+        }
+
+    }
+
+    /*Reducimos tamaño del texto en zona texto footer*/
+
+    @media screen and (max-width: 460px){
+
+        .texto-footer{
+
+            font-size: 0.85em;
+
+        }
+
+    }
+
+    /*Evitamos que el texto toque los bordes*/
+
+    @media screen and (max-width: 435px){
+
+        .profesional li{
+
+            max-width: 90%;      
+            line-height: 1rem;
+            margin: auto;  
+            margin-bottom: 3rem;  
+             
+
+        }
+
+        .empresa li::after{
+
+            opacity: 1;
+
+        }
+
+
+
+    }
+
+    /*El logo y texto del footer pasan a estar en lineas aparte ocupando el 100%*/
+
+    @media screen and (max-width: 424px){
+
+        .logo-2{
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-2 img{
+
+            width: 50%;
+
+        }
+
+        .texto-footer{
+            margin-top: 1em;
+            width: 100%;
+
+        }
+
+        .creditos{
+
+            margin-top: 0.8em;
+
+        }
+
+
+    }
+
+
+    /*Arreglamos el texto en resoluciones pequeñas en inicio*/
+
+    @media screen and (max-width: 412px){
+
+        .inicio{
+
+            text-align: center;
+
+        }
+
+        .inicio > h2{
+
+            max-width: 80%;
+
+        }
+
+
+
+
+    }
+
+    /*Reducimos tamaño de h3 en empresa para que no choque con los bordes*/
+
+    @media screen and (max-width: 396px){
+
+        .empresa div h3{
+
+            font-size: 2.9em;
+
+        }
+
+    }
+
+
+    /*Evitamos que el logo de alquimify empieze a chocar con el menu hamburguesa*/
+
+    @media screen and (max-width: 385px){
+
+        .header{
+
+            font-size: 0.6rem;
+
+        }
+
+        .hamburguesa{
+
+            margin-top: 15px;
+            margin-right: 20px;
+
+        }
+
+
+    }
+
+    /*Ajustes de tipo de letra  para tamaños mas pequeños, zona profesionales* y zona empresa*/
+
+    @media screen and (max-width: 365px){
+
+        .profesional h3{
+
+             font-size: 2em;
+             
+
+        }
+
+        .empresa div{
+
+            font-size: 0.8rem;
+
+        }
+
+
+
+    }
+
+    /*Media querys para verificar si se esta en landscape o portrait  
+
+    
+    @media all and (orientation:portrait){
+
+        .inicio{
+
+            padding-bottom: 2em;
+
+        }
+
+
+    }
+
