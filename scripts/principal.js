@@ -3,10 +3,10 @@
 
 /*Obtenemos nuestros elementos html */
 
-let header = document.getElementById("header");
-let inicio  = document.getElementById("inicio");
+const header = document.getElementById("header");
+const inicio  = document.getElementById("inicio");
 
-let altoHeader = header.offsetHeight;
+const altoHeader = header.offsetHeight;
 
 
 function activarPegajoso(){
@@ -46,4 +46,52 @@ function mostrarMenu(){
 }
 
 
+                /* Codigo para mostrar el formulario*/
 
+/* Obtengo todos mis botones CTA*/
+
+const boton1 = document.getElementById("boton1");
+const boton2 = document.getElementById("boton2");
+const boton3 = document.getElementById("boton3");
+
+const CTAs = [boton1, boton2, boton3];
+
+const popup = document.getElementById("popup");
+const formulario = document.getElementById("formulario");
+
+    /*Esta funcion activa la escucha de los eventos de los Call To Action */
+
+function abrirFormulario(){
+
+    for(let i = 0;i<=2;i++){
+
+        CTAs[i].addEventListener("click", function hola(){
+
+            popup.classList.add("visible");
+         
+
+        });
+
+    }
+}
+
+abrirFormulario();
+
+    /*Codigo para que se pueda cerrar el formulario*/
+
+    /*Obtengo mi boton de salir*/
+    const salir_formulario = document.getElementById("salir_formulario");
+
+    /*Esta funcion activa la escucha del evento para que se cierre el popup*/
+    function cerrarFormulario(){
+
+        salir_formulario.addEventListener("click", function(){
+
+            popup.classList.remove("visible");
+        
+
+    
+        });
+
+    }
+    cerrarFormulario();

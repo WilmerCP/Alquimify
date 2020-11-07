@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="estilos/paleta1.css">
 
 
@@ -42,7 +43,7 @@
                     <a href="#">Inicio</a>
                     <a href="#">Servicios</a>
                     <a href="#">Prestaciones</a>
-                    <a href="#" role="button" class="boton boton1">Pedir Asesoría</a>
+                    <button class="boton boton1" id="boton1">Pedir Asesoría</button>
                 
             </nav>
 
@@ -58,7 +59,7 @@
                son los que tienen buena presencia en la web, te ayudamos a no quedarte atrás.
             </p>
 
-            <a href="#" role="button" class="boton boton2">Pedir Asesoría</a>
+            <button class="boton boton2" id="boton2">Pedir Asesoría</button>
         </div>
     </div>
 
@@ -106,9 +107,10 @@
 			<div class="conjunto">
 			<h3>¿Necesitas más información?</h3>
 			<p>Te ofrecemos una consultoría online gratuita en la cual vamos a ayudarte a armar un plan de marketing apropiado para hacer crecer tu negocio en internet.</p>
-		    </div>
-			<a href="#" role="button" class="boton boton3">Pedir Asesoría</a>
+            </div>
+            <button class="boton boton3" id="boton3">Pedir Asesoría</button>
 		</div>
+
     </aside>
 
     <footer class="footer" id="footer">
@@ -140,6 +142,84 @@
 
 
     </footer>
+
+    <div class="popup" id="popup">
+
+        <form action="" name="formulario" id="formulario">
+
+            <i class="icon-cross" id="salir_formulario"></i>
+
+            <h4>Asesoría Gratuita</h4>
+
+            <div class="aclaraciones">
+                <span><b>Sin compromisos.</b> En el peor de los casos, saldrá de la asesoría con una visión clara de estrategias que puede implementar por su cuenta.</span>
+                <span><b>Valoramos su tiempo.</b> Más del 90% del tiempo será usado para discutir sus desafíos y posibles soluciones.</span>
+            </div>
+
+            <div class="imagen_formulario"><img src="imagenes/consulta.svg" alt="Asesoría Gratuita"></div>
+
+            <div class="grupo">
+                <label for="campo_nombre">Nombre</label>
+                <input type="text" name="Nombre" id="campo_nombre" class="caja_texto" required>    
+            </div>
+
+            
+            <div class="grupo">
+                <label for="campo_apellido">Apellido</label>
+                <input type="text" name="Apellido" id="campo_apellido" class="caja_texto" required>
+            </div>
+            
+            <div class="grupo">
+                <label for="campo_empresa">Empresa</label>
+                <input type="text" name="Empresa" id="campo_empresa" class="caja_texto" required>
+            </div>
+
+            <div class="grupo">
+                <label for="campo_telefono">Teléfono</label>
+                <input type="text" name="Telefono" id="campo_telefono" class="caja_texto" required>
+            </div>
+
+            <div class="grupo">
+                <label for="campo_email">Email</label>
+                <input type="email" name="Email" id="campo_email" class="caja_texto" required>
+            </div>
+
+            <div class="grupo">
+                <label for="campo_url">URL</label>
+                <input type="text" name="Url" id="campo_url" class="caja_texto">
+            </div>
+
+            <div class="grupo penultimo_grupo">
+                <label for="campo_pais">País</label>
+                <select name="Pais" id="campo_pais" class="caja_texto" required>
+                    <option value=""></option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Chile">Chile</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="España">España</option>
+                    <option value="Mexico">México</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Republica Dominicana">República Dominicana</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+            </div>
+
+            
+         <div class="grupo ultimo_grupo">
+            <label for="campo_descripcion">Descripción</label>
+            <textarea name="Descripcion" id="campo_descripcion" cols="37" rows="7"></textarea>
+         </div>
+
+        <input type="submit" value="Pedir Asesoría" name="boton_enviar" class="boton" id="boton_enviar">
+
+         <div class="espaciado"></div>
+
+        </form>
+
+    </div>
 
     <script src="scripts/principal.js"></script>
 

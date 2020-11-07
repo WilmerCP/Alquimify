@@ -201,7 +201,7 @@ font-size: 0.8rem;
 
 }
 
-.menu-principal>a{
+.menu-principal>a, .boton1{
 
     margin-right: 3em;
     color: white;
@@ -234,6 +234,12 @@ font-size: 0.8rem;
     background-color: var(--acento-claro);
     border-radius: 34px;
     
+
+}
+
+.boton1{
+
+    border: none;
 
 }
 
@@ -289,6 +295,7 @@ nav>.boton:hover{
     margin-top: 45px;
     margin-left: 25px;
     margin-bottom: 30px;
+    border: none;
 
 }
 
@@ -631,6 +638,219 @@ aside{
 
     }
 
+        /*Empiezan los estilos del popup*/
+
+        .popup{
+
+            display: flex;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            padding-top: 20px;
+
+            background-color: rgba(0,0,0,0.8);
+
+            justify-content: center;
+            text-align: center;
+
+            z-index: 1000;
+
+            display: none;
+            
+        }
+
+        /*clase para cuando queramos que se muestre el formulario*/
+
+        .popup.visible{
+
+            display: flex;
+
+        }
+
+
+
+        /*Contenedor blanco del pop up*/
+
+        .popup form{
+
+
+            transition: all 1s ease;
+            background-color: white;
+            width: 85%;
+            height: auto;
+            max-width: 750px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 1em;
+            padding-right: 1em;
+            padding-left: 1em;
+            border-radius: 5px;
+            overflow: auto;
+            position: relative;
+                        
+        }
+
+
+        /*Boton de salir*/
+
+        #formulario i:hover{
+
+            color: red;
+
+        }
+
+
+        /*Asesoría Gratuita*/
+
+        .popup form h4{
+
+            display: block;
+            width: 100%;
+            font-size: 2.5em;
+            font-family: var(--fuentes-titulos);
+            color: var(--color-principal);
+
+
+        }
+
+        .imagen_formulario img{
+            display: block;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .imagen_formulario{
+
+            display: flex;
+            width: 30%;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        /*Texto introductorio*/
+
+        .popup .aclaraciones{
+            padding-top: 2em;
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: max-content;
+ 
+
+        }
+
+        .aclaraciones span{
+
+            display: block;
+            font-family: var(--fuentes-textos);
+            color: var(--color-textos);
+            padding-top: 1em;
+
+        }
+
+        .aclaraciones span b{
+
+            color: black;
+
+        }
+
+        /*contenedores de input+label*/
+
+        #formulario .grupo{
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.5em;
+
+        }
+
+        /*Textos de cada label*/
+
+        #formulario .grupo label{
+
+            font-family: 'Lato', sans-serif;
+            font-weight: 600;
+            font-size: 1.5em;
+            margin-bottom: 0.6em;
+        }
+
+        #formulario .grupo input, #formulario .grupo select{
+
+            width: 90%;
+            max-width: 270px;
+            height: 2.5em;
+            margin: auto;
+            padding-left: 1em;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        #formulario .grupo input, #formulario .grupo select, #formulario .grupo textarea{
+
+            font-family: var(--fuentes-textos);
+
+        } 
+
+        /*Grupo que contiene el campo pais*/
+
+        #formulario .grupo.penultimo_grupo{
+
+            margin: auto;
+            margin-top: 1.5em;
+
+        }
+
+        /*Ultimo grupo que contiene el campo para dejar un mensaje*/
+
+        #formulario .grupo.ultimo_grupo{
+
+            width: 60%;
+
+        }
+
+        #formulario .grupo.ultimo_grupo textarea{
+
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            resize: none;
+            padding: 0.5em;
+
+        }
+
+        #boton_enviar{
+
+            margin: auto;
+            align-self: center;
+            border: none;
+            padding: 0.9em;
+            border-radius: 1.6em;
+            font-size: 1.5em;
+            background-color: var(--color-principal);
+
+        }
+
+        #boton_enviar:hover{
+
+            background-color: var(--color-principal-claro);
+
+        }
+
+        .espaciado{
+
+            display: block;
+            width: 100%;
+            height: 3em;
+
+        }
 
 
                 /*Empiezan mis media querys*/
