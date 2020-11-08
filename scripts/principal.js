@@ -59,18 +59,22 @@ const CTAs = [boton1, boton2, boton3];
 const popup = document.getElementById("popup");
 const formulario = document.getElementById("formulario");
 
+
+    /*Funcion para mostrar o quitar el popup*/
+
+    function mostrarPopup(){
+
+        popup.classList.toggle("visible");
+
+    }
+
     /*Esta funcion activa la escucha de los eventos de los Call To Action */
 
 function abrirFormulario(){
 
     for(let i = 0;i<=2;i++){
 
-        CTAs[i].addEventListener("click", function hola(){
-
-            popup.classList.add("visible");
-         
-
-        });
+        CTAs[i].addEventListener("click",mostrarPopup);
 
     }
 }
@@ -85,13 +89,10 @@ abrirFormulario();
     /*Esta funcion activa la escucha del evento para que se cierre el popup*/
     function cerrarFormulario(){
 
-        salir_formulario.addEventListener("click", function(){
-
-            popup.classList.remove("visible");
+        salir_formulario.addEventListener("click",mostrarPopup);
         
-
-    
-        });
-
     }
     cerrarFormulario();
+
+
+    

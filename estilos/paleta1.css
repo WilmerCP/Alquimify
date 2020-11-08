@@ -4,7 +4,8 @@
     --color-fondo: white;
 
     --color-principal:#4a4474;
-    --color-principal-claro:#685fa1;
+    --color-principal-claro:#efedfc;
+    --color-principal-alternativo:#776eaf;
 
 
     --acento-claro:#e45b6d;
@@ -375,7 +376,7 @@ nav>.boton:hover{
 
     content: "";
     display: block;
-    background-color: var(--color-principal-claro);
+    background-color: var(--color-principal);
     margin-right: 4rem;
     width: 6px;
     height: 300px;
@@ -677,7 +678,7 @@ aside{
 
 
             transition: all 1s ease;
-            background-color: white;
+            background-color: var(--color-principal-claro);
             width: 85%;
             height: auto;
             max-width: 750px;
@@ -734,7 +735,7 @@ aside{
 
         /*Texto introductorio*/
 
-        .popup .aclaraciones{
+        .aclaraciones{
             padding-top: 2em;
             width: 70%;
             display: flex;
@@ -762,7 +763,7 @@ aside{
 
         /*contenedores de input+label*/
 
-        #formulario .grupo{
+        .grupo{
 
             width: 50%;
             display: flex;
@@ -773,19 +774,21 @@ aside{
 
         /*Textos de cada label*/
 
-        #formulario .grupo label{
+        .grupo label{
 
             font-family: 'Lato', sans-serif;
             font-weight: 600;
-            font-size: 1.5em;
+            font-size: 1.4em;
             margin-bottom: 0.6em;
+            text-align: left;
+            margin-left: 1.8em;
         }
 
-        #formulario .grupo input, #formulario .grupo select{
+        .grupo input, .grupo select{
 
             width: 90%;
             max-width: 270px;
-            height: 2.5em;
+            height: 2.8em;
             margin: auto;
             padding-left: 1em;
             padding-top: 10px;
@@ -793,15 +796,17 @@ aside{
 
         }
 
-        #formulario .grupo input, #formulario .grupo select, #formulario .grupo textarea{
+        .grupo input, .grupo select, .grupo textarea{
 
             font-family: var(--fuentes-textos);
-
+            border-radius: 0.5em;
+            border-style: solid;
+            border-color: var(--color-principal);
         } 
 
         /*Grupo que contiene el campo pais*/
 
-        #formulario .grupo.penultimo_grupo{
+        .grupo.penultimo_grupo{
 
             margin: auto;
             margin-top: 1.5em;
@@ -810,13 +815,13 @@ aside{
 
         /*Ultimo grupo que contiene el campo para dejar un mensaje*/
 
-        #formulario .grupo.ultimo_grupo{
+        .grupo.ultimo_grupo{
 
             width: 60%;
 
         }
 
-        #formulario .grupo.ultimo_grupo textarea{
+        .grupo.ultimo_grupo textarea{
 
             width: 90%;
             max-width: 400px;
@@ -840,7 +845,7 @@ aside{
 
         #boton_enviar:hover{
 
-            background-color: var(--color-principal-claro);
+            background-color: var(--color-principal-alternativo);
 
         }
 
@@ -993,7 +998,7 @@ aside{
     }
 
 
-    .menu-principal a{
+    .menu-principal a, .menu-principal .boton1{
 
         font-size: 2em;
         margin-right: 0px;
@@ -1260,6 +1265,36 @@ aside{
 
     }
 
+        /*Ajustes en la disposicion del formulario*/
+
+        @media screen and (max-width: 643px){
+
+            #boton_enviar{
+
+                margin-top: 2em;
+            }
+
+            .grupo.ultimo_grupo{
+
+                width: 100%;
+
+
+            }
+
+            .grupo label{
+
+                margin-left: 1em;
+
+            }
+
+            .grupo.ultimo_grupo label{
+
+                margin-left: 2.8em;
+
+            }
+
+        }
+
         /*Ajustes de texto y centrado en la zona inicio */
 
         @media screen and (max-width: 591px){
@@ -1309,7 +1344,22 @@ aside{
     
         }
 
+
+        /*Ajuste al label del text area*/
+
+        @media screen and (max-width:560px){
+
+            .grupo.ultimo_grupo label {
+                margin-left: 1.2em;
+            }
+
+
+        }
+
+
+
     /*Evitamos que el texto toque los bordes, y ajuste de imagen*/
+    /*Tambien hacemos que los campos para ingresar datos del foormulario esten uno debajo del otro*/
 
     @media screen and (max-width: 490px){
 
@@ -1324,6 +1374,39 @@ aside{
             width: 60%;
 
         }
+
+        .grupo{
+
+            width: 100%;
+
+
+        }
+
+        .grupo label{
+
+            margin-left: 2.7em;
+        }
+
+        .aclaraciones{
+
+            width: 100%;
+
+
+        }
+
+        .aclaraciones span{
+
+            width: 100%;
+
+        }
+
+        .imagen_formulario{
+
+            width: 70%;
+            margin:auto;
+        }
+
+        
 
     }
 
@@ -1479,21 +1562,16 @@ aside{
 
         }
 
+        .aclaraciones{
 
-
-    }
-
-    /*Media querys para verificar si se esta en landscape o portrait  
-
-    
-    @media all and (orientation:portrait){
-
-        .inicio{
-
-            padding-bottom: 2em;
+            margin-bottom: 1em;
 
         }
 
+        #formulario{
+
+            width: 95%;
+        }
 
     }
 
