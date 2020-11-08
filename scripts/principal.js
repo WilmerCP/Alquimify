@@ -57,6 +57,7 @@ const CTAs = [boton1, boton2, boton3];
 
 const popup = document.getElementById("popup");
 const formulario = document.getElementById("formulario");
+const body = document.getElementById("body");
 
 
     /*Funcion para mostrar o quitar el popup*/
@@ -64,6 +65,7 @@ const formulario = document.getElementById("formulario");
     function mostrarPopup(){
 
         popup.classList.toggle("visible");
+        body.classList.toggle("superpuesto");
 
     }
 

@@ -645,22 +645,17 @@ aside{
 
         .popup{
 
-            display: flex;
+            
             position: fixed;
             top: 0px;
             left: 0px;
             right: 0px;
             bottom: 0px;
             padding-top: 20px;
-
             background-color: rgba(0,0,0,0.6);
-
-            justify-content: center;
-            text-align: center;
-
             z-index: 1000;
-
             display: none;
+            overflow: auto;
             
         }
 
@@ -668,21 +663,30 @@ aside{
 
         .popup.visible{
 
-            display: flex;
+            display: inline-block;
+            
 
         }
 
+        /*Clase para que no exista scroll en la pagina web cuando este le popup*/
+
+        .superpuesto{
+
+            overflow: hidden;
+
+
+        }
 
 
         /*Contenedor blanco del pop up*/
 
         .popup form{
 
-
+            margin: auto;
+            text-align: center;
             transition: all 1s ease;
             background-color: var(--color-principal-claro);
-            width: 85%;
-            height: auto;
+            width: 90%;
             max-width: 750px;
             display: flex;
             flex-wrap: wrap;
@@ -690,8 +694,9 @@ aside{
             padding-right: 1em;
             padding-left: 1em;
             border-radius: 5px;
-            overflow: auto;
-            position: relative;
+            height: auto;
+            overflow-y: visible;
+            margin-bottom: 1.5em;
                         
         }
 
@@ -841,13 +846,13 @@ aside{
             padding: 0.9em;
             border-radius: 1.6em;
             font-size: 1.5em;
-            background-color: var(--color-principal);
+            background-color: var(--acento-claro);
 
         }
 
         #boton_enviar:hover{
 
-            background-color: var(--color-principal-alternativo);
+            background-color: var(--acento-oscuro);
 
         }
 
