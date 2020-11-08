@@ -16,13 +16,12 @@ function activarPegajoso(){
     if(bajada !=0){
 
         header.classList.add("cambio");
-        var espacio = altoHeader+30;
-        inicio.style.paddingTop = espacio+"px";
+
 
     }else{
 
         header.classList.remove("cambio");
-        inicio.style.paddingTop = "30px";
+    
     }
 
 }
