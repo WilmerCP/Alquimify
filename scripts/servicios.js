@@ -28,33 +28,6 @@ function activarPegajoso(){
 
     window.addEventListener("scroll", activarPegajoso);
 
-                /* Codigo para el menu secundario */
-
-const menuSecundario = document.getElementById("menu-secundario");
-
-
-let distanciaSecundario = inicio.offsetHeight + importancia.offsetHeight;
-
-
-function cambiarSecundario(){
-
-    let bajada = document.documentElement.scrollTop;
-
-    if(bajada >= distanciaSecundario){
-
-        menuSecundario.classList.add("cambio");
-        menuSecundario.style.top ="91px";
-
-    }else{
-
-        menuSecundario.classList.remove("cambio");
-
-    }
-
-}
-
-    window.addEventListener("scroll", cambiarSecundario);
-
 
                                 /* Código del menu-hamburguesa */
                                 
@@ -77,10 +50,9 @@ function mostrarMenu(){
 /* Obtengo todos mis botones CTA*/
 
 const boton1 = document.getElementById("boton1");
-const boton2 = document.getElementById("boton2");
 const boton3 = document.getElementById("boton3");
 
-const CTAs = [boton1, boton2, boton3];
+const CTAs = [boton1, boton3];
 
 const popup = document.getElementById("popup");
 const formulario = document.getElementById("formulario");
@@ -100,7 +72,7 @@ const body = document.getElementById("body");
 
 function abrirFormulario(){
 
-    for(let i = 0;i<=2;i++){
+    for(let i = 0;i<=1;i++){
 
         CTAs[i].addEventListener("click",mostrarPopup);
 
