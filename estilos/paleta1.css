@@ -789,7 +789,8 @@ aside{
 
 .conjunto{
 
-    max-width: 70%;
+    max-width: 75%;
+    text-align: center;
 
 }
 .conjunto>h3{
@@ -797,14 +798,28 @@ aside{
     font-family: 'Nunito',Arial,sans-serif;
     margin-bottom: 1rem;
     color: var(--color-titulos);
-
 }
 
 .conjunto>p{
 
     font-family: var(--fuentes-textos);
-    max-width: 85%;
     color: var(--color-textos);
+    margin-bottom: 0.6em;
+
+}
+
+.conjunto>p:first-of-type{
+
+    color: black;
+    font-style: italic;
+    margin-bottom: 0.8em;
+    
+
+}
+
+.conjunto b{
+
+    color: black;
 
 }
 
@@ -998,14 +1013,32 @@ aside{
 
         /*Asesoría Gratuita*/
 
+        .texto-formulario{
+            display: flex;
+            width: 70%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
         .popup form h4{
 
             display: block;
             width: 100%;
-            font-size: 2.5em;
+            font-size: 2.7em;
             font-family: var(--fuentes-titulos);
             color: var(--color-principal);
+            margin-top: 1em;
 
+
+        }
+
+        .texto-formulario p{
+
+            width: 100%;
+            font-family: var(--fuentes-textos);
+            margin-top: 1.2em;
+            color: var(--color-textos);
 
         }
 
@@ -1019,38 +1052,10 @@ aside{
         .imagen_formulario{
 
             display: flex;
-            width: 30%;
+            width: 25%;
             height: auto;
             justify-content: center;
             text-align: center;
-
-        }
-
-        /*Texto introductorio*/
-
-        .aclaraciones{
-            padding-top: 2em;
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: max-content;
- 
-
-        }
-
-        .aclaraciones span{
-
-            display: block;
-            font-family: var(--fuentes-textos);
-            color: var(--color-textos);
-            padding-top: 1em;
-
-        }
-
-        .aclaraciones span b{
-
-            color: black;
 
         }
 
@@ -1231,6 +1236,35 @@ aside{
 
     }
 
+
+    /*Quitamos el exceso de padding en la zona de invitacion para que entre mejor el contenido*/
+
+    @media screen and (max-width: 1067px){
+
+        .invitacion{
+    
+            padding-right: 1em;
+            justify-content: center;
+    
+        }
+        
+        .conjunto{
+    
+            max-width: 60%;
+    
+        }
+    
+        .conjunto p, .conjunto h3{
+    
+            text-align: center;
+            max-width: 90%;
+    
+        }
+    
+        }
+    
+    
+
     /*Ajustes de espacio del footer*/
 
     @media screen and (max-width: 1027px){
@@ -1257,6 +1291,8 @@ aside{
 
     }
 
+
+    
     /*Pequeño ajuste del texto para que no se vea feo*/
     @media screen and (max-width: 1013px){
 
@@ -1424,33 +1460,6 @@ aside{
 
     }
 }
-
-    /*Quitamos el exceso de padding en la zona de invitacion para que entre mejor el contenido*/
-
-    @media screen and (max-width: 906px){
-
-    .invitacion{
-
-        padding-right: 1em;
-        justify-content: center;
-
-    }
-    
-    .conjunto{
-
-        max-width: 60%;
-
-    }
-
-    .conjunto p, .conjunto h3{
-
-        text-align: center;
-        max-width: 90%;
-
-    }
-
-    }
-
 
 
     /*Zona de profesionales, pasamos a que la imagen y contenido esten uno abajo de otro*/
@@ -1711,6 +1720,26 @@ aside{
 
         }
 
+
+        @media screen and (max-width: 622px){
+
+
+            .texto-formulario{
+
+                width: 100%;
+    
+    
+            }
+    
+    
+            .imagen_formulario{
+    
+                width: 60%;
+                margin:auto;
+            }
+
+        }
+
         /*Ajustes de texto y centrado en la zona inicio */
         /*Tambien hago un ajuste a la imagen de fondo del body*/
 
@@ -1921,6 +1950,20 @@ aside{
 
             font-size: 0.85em;
 
+        }
+
+    }
+
+    /*ajustamos el tamaño de la imagen del formulario*/
+
+    @media screen and (max-width: 440px){
+
+       
+
+        .imagen_formulario{
+    
+            width: 70%;
+            margin:auto;
         }
 
     }

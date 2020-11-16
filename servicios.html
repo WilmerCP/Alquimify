@@ -39,69 +39,99 @@
 
                     <a href="index.html">Inicio</a>
                     <a href="#">Servicios</a>
-                    <button class="boton boton1" id="boton1">Pedir Asesoría</button>
+                    <button class="boton boton1" id="boton1" onclick="mostrarMenu(); location.href='#aside'">Pedir Asesoría</button>
                 
             </nav>
 
         </header>
 
-    <!-- Call to action asesoría -->
+        <section class="intro-servicios">
 
-     <aside>
-			<div class="invitacion">
-			<div class="conjunto">
-			<h3>¿Necesitas más información?</h3>
-			<p>Te ofrecemos una consultoría online gratuita en la cual vamos a ayudarte a armar un plan de marketing apropiado para hacer crecer tu negocio en internet.</p>
+            <h3>Servicios de marketing que se adaptan a las necesidades de tu negocio.</h3>
+
+            <h4>Contratación sin <i>riesgos</i></h4>
+
+            <ul>
+                <li>No te haremos firmar un contrato a largo plazo.</li>
+                <li>Si en algún momento deseas dejar de trabajar con nosotros, tan solo necesitas avisarnos
+                    con 30 días de anticipación.</li>
+                <li>En ese tiempo, nos aseguraremos de finalizar tareas pendientes y de hacer el traspaso de 
+                    actividades a tu equipo.</li>
+            </ul>
+
+
+        </section>
+
+        <section class="zona-servicios">
+
+            <div class="recuadro web">
+                <h4>Tu hogar en la web</h4>
+                <ul>
+                    <li>Sitio Web.</li>
+                    <li>Tienda Online.</li>
+                    <li>Páginas de aterrizaje.</li>
+                </ul>
+
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
             </div>
-            <button class="boton boton3" id="boton3">Pedir Asesoría</button>
-		</div>
 
-    </aside>
+            <div class="recuadro publicidad">
+                <h4>Campañas publicitarias online</h4>
+                <ul>
+                    <li>Anuncios en redes sociales.
+                        <ul>
+                            <li class="sublista">Instagram</li>
+                            <li class="sublista">Facebook</li>
+                        </ul>
+                    </li>
+                    <li>Anuncios en google.</li>
+                </ul>
 
-    <footer class="footer" id="footer">
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
 
-        
-        <figure class="logo-2">
-            <img src="imagenes/logo.png" alt="Logo">
-        </figure>
+            <div class="recuadro contenidos">
+                <h4>Estrategia de contenidos</h4>
+                <ul>
+                    <li>Para empresas.</li>
+                    <li>Para profesionales.</li>
+                </ul>
 
-        <div class="texto-footer">
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
 
-        <div class="derechos">
-            <span>©Alquimify 2020 - Todos los derechos reservados.</span>
-        </div>
+            <div class="recuadro redes">
+                <h4>Community management</h4>
+                <ul>
+                    <li>Manejo de redes sociales corporativas.</li>
+                </ul>
 
-        <div class="creditos">
-            <a href="https://stories.freepik.com">Illustrations by Freepik Stories</a>
-        </div>
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
 
-        </div>
+        </section>
 
+        <section class="proximamente">
 
-        <div class="sociales">
-        <!--<i class="icon-linkedin"></i>-->
-        <a href="https://www.instagram.com/alquimify/?hl=es-la" target="_blank" class="icon-instagram"></a>
-        <!--<i class="icon-facebook"></i>-->
-        <span>Conecta con nosotros</span>
-        </div>
+            <h5>Próximamente...</h5>
 
+            <div class="audiovisual">
+                <p>Producción audiovisual y diseño gráfico.</p>
+            </div>
+            <div class="automatico">
+                <p>Marketing automático / Email marketing</p>
+            </div>
 
-    </footer>
+        </section>
 
-    <div class="popup" id="popup">
+    <!-- Formulario -->
+
+     <aside class="aside" id="aside">
+
+        <h3>Descubrí cual es el plan correcto para tu negocio</h3>
+        <span>Dejanos tus datos, te estaremos contactando durante las próximas 48 horas.</span>
 
         <form action="" name="formulario" id="formulario">
-
-            <i class="icon-cross" id="salir_formulario"></i>
-
-            <h4>Asesoría Gratuita</h4>
-
-            <div class="aclaraciones">
-                <span><b>Sin compromisos.</b> En el peor de los casos, saldrá de la asesoría con una visión clara de estrategias que puede implementar por su cuenta.</span>
-                <span><b>Valoramos su tiempo.</b> Más del 90% del tiempo será usado para discutir sus desafíos y posibles soluciones.</span>
-            </div>
-
-            <div class="imagen_formulario"><img src="imagenes/consulta.svg" alt="Asesoría Gratuita"></div>
 
             <div class="grupo">
                 <label for="campo_nombre">Nombre</label>
@@ -164,7 +194,39 @@
 
         </form>
 
-    </div>
+    </aside>
+
+    <footer class="footer" id="footer">
+
+        
+        <figure class="logo-2">
+            <img src="imagenes/logo.png" alt="Logo">
+        </figure>
+
+        <div class="texto-footer">
+
+        <div class="derechos">
+            <span>©Alquimify 2020 - Todos los derechos reservados.</span>
+        </div>
+
+        <div class="creditos">
+            <a href="https://stories.freepik.com">Illustrations by Freepik Stories</a>
+        </div>
+
+        </div>
+
+
+        <div class="sociales">
+        <!--<i class="icon-linkedin"></i>-->
+        <a href="https://www.instagram.com/alquimify/?hl=es-la" target="_blank" class="icon-instagram"></a>
+        <!--<i class="icon-facebook"></i>-->
+        <span>Conecta con nosotros</span>
+        </div>
+
+
+    </footer>
+
+
 
     <script src="scripts/servicios.js"></script>
 

@@ -41,6 +41,7 @@ body{
     background-position-y: -300px;
     background-position-x: 500px;
     background-size: 100%;
+    background-attachment: fixed;
     
 
 }
@@ -265,93 +266,363 @@ h1{
     color: white;
 }
 
+/*Introducción a la zona de servicios*/
 
-/*Empiezan los estilos de mi aside*/
+.intro-servicios{
 
-
-aside{
-
-
-    background-color: var(--color-fondo);
-    padding-bottom: 5rem;
-
+    display: block;
+    padding-left: 5%;
+    padding-right: 5%; 
+    padding-top: 2em;
+    padding-bottom: 7em;
     display: flex;
-    justify-content: center;
-
-}
-
-/*Estilos de mi call to action*/
-
-
-.invitacion{
-
-    display: inline-block;
-    display: flex;
-
-    justify-content: space-between;
-
-    background: white;
-    width: 80%;
-    margin-top: 2.5rem;
-    padding: 1.25rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-right: 4rem;
-
-    box-shadow: 0 0 1.25rem grey;
-
-}
-
-.conjunto{
-
-    max-width: 70%;
-
-}
-.conjunto>h3{
-
-    font-family: 'Nunito',Arial,sans-serif;
-    margin-bottom: 1rem;
-    color: var(--color-titulos);
-
-}
-
-.conjunto>p{
-
-    font-family: var(--fuentes-textos);
-    max-width: 85%;
-    color: var(--color-textos);
-
-}
-
-.boton3{
-
-    display: inline-block;
-    display: flex;
-    width: 13rem;
-    color: white;
-    background-color: var(--acento-claro);
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    font-size: 1.4rem;
-    border: none;
-    box-shadow: 0 0 15px grey;
-    height: max-content;
-    align-self: center;
+    font-family: var(--fuente-neutra);
+
+
+}
+
+
+.intro-servicios h3{
+
+    font-size: 2em;
+    text-align: center;
+
+}
+
+.intro-servicios h4{
+
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+    text-align: center;
+
+}
+
+.intro-servicios h4 i{
+    
+    font-style: normal;
+    text-decoration: line-through;
+    text-decoration-color: red;
+}
+
+.intro-servicios li{
+
+    margin-top: 2em;
+    color: var(--color-textos);
+    font-size: 1.4em;
     text-align: center;
 
 
 }
 
-.boton3:hover{
+.intro-servicios li::before{
 
-    background-color: var(--acento-oscuro);
+    content: "";
+    display: inline-block;
+    background-color: var(--color-principal);
+    border-radius: 50%;
+    width: 0.7em;
+    height: 0.7em;
+    margin-right: 0.2em;
 
 }
 
-.boton3:active{
+/*Empiezan los estilos de mi zona de servicios*/
 
-    box-shadow: none;
+.zona-servicios{
 
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "web publicidad" "contenidos redes";
+    gap: 9em;
+    padding: 7em;
+    padding-left: 14em;
+    padding-right: 14em;
+    background-color: #efedfc81;
+    box-shadow:  1px -4px 3px grey;
+
+}
+
+.recuadro{
+    background-color: white;
+    box-shadow: 0 0 5px var(--color-principal);
+    padding: 2em;
+    font-family: var(--fuente-neutra);
+    position: relative;
+}
+
+.recuadro::before{
+
+    content: "";
+    display: block;
+    padding-top: 100%;
+    float: left;
+
+}
+
+
+.recuadro h4{
+    font-family: var(--fuentes-titulos);
+    color: var(--color-principal);
+    text-align: center;
+    font-size: 1.6em;
+    margin-bottom: 1em;
+
+
+}
+
+.recuadro li{
+
+    font-size: 1.2em;
+    margin-top: 1em;
+
+}
+
+.web{
+    
+    grid-area: web;
+    font-size: 1.3em;
+
+}
+
+.web li{
+
+    margin-top: 1.2em;
+    font-size: 1em;
+
+}
+
+.web li::before{
+
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border-left: solid 10px var(--acento-oscuro);
+    border-top: solid 9px transparent;
+    border-bottom: solid 9px transparent;
+    margin-right: 0.5em;
+}
+
+.consultar{
+
+    position: absolute;
+    display: block;
+    background-color: var(--acento-claro);
+    color: white;
+    padding: 1.2rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    border: none;
+    border-radius: 38% 38% 38% 38%/100% 100% 100% 100%;
+    font-family: var(--fuentes-textos);
+    transition: all 1s ease;
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-align: center;
+    box-shadow: 0 0 0.32rem var(--acento-claro);
+
+    bottom: -1.4rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.consultar:hover{
+
+    background-color: var(--acento-oscuro);
+}
+
+
+
+.publicidad{
+
+    grid-area: publicidad;
+    font-size: 1.1rem;
+
+}
+
+
+.publicidad li{
+
+    font-size: 1.2em;
+
+}
+
+.publicidad li::before{
+
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border-left: solid 10px var(--acento-oscuro);
+    border-top: solid 9px transparent;
+    border-bottom: solid 9px transparent;
+    margin-right: 0.5em;   
+
+}
+
+.publicidad li li{
+
+    font-size: 1em;
+    color: var(--color-textos);
+    margin-left: 15%;
+
+}
+
+.publicidad .sublista{
+
+    margin-top: 0.5em;
+
+} 
+
+.publicidad li li::before{
+
+    content: "";
+    display: inline-block;
+    width: 0.5em;
+    height: 0.5em;
+    border: none;
+    background-color: var(--acento-oscuro);  
+    border-radius: 50%;
+    margin-right: 0.5em; 
+
+}
+
+.contenidos{
+
+    grid-area: contenidos;
+    font-size: 1.4em;
+}
+
+.contenidos li::before{
+
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border-left: solid 10px var(--acento-oscuro);
+    border-top: solid 9px transparent;
+    border-bottom: solid 9px transparent;
+    margin-right: 0.5em;   
+
+}
+
+
+.redes{
+
+    grid-area: redes;
+    font-size: 1.6em;
+}
+
+.redes li{
+
+    font-size: 1em;
+
+}
+
+.redes li::before{
+
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+    border-left: solid 10px var(--acento-oscuro);
+    border-top: solid 9px transparent;
+    border-bottom: solid 9px transparent;
+    margin-right: 0.5em;   
+
+}
+
+.proximamente{
+
+    display: flex;
+    background-color: #efedfc81;
+    box-shadow:1px 4px 3px grey;
+    padding-top: 2em;
+    flex-wrap: wrap;
+    padding-bottom: 5em;
+}
+
+
+.proximamente h5{
+
+    display: block;
+    font-family: var(--fuentes-textos);
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 2em;
+    width: 100%;
+
+}
+
+.audiovisual{
+
+    width: 20%;
+    margin-left: 20%;
+    margin-right: 10%;
+    background-color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 5px grey;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.audiovisual::before, .automatico:before{
+
+    content: "";
+    display: block;
+    margin-top: 80%;
+    float: left;
+
+}
+
+.audiovisual p{
+
+    font-size: 2.2em;
+    font-weight: 600;
+    font-family: var(--fuentes-textos);
+    color: var(--color-principal);
+}
+
+.automatico{
+
+    width: 20%;
+    margin-left: 10%;
+    margin-right: 20%;
+    background-color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    box-shadow: 0 0 5px grey;
+    padding-left: 1em;
+    padding-right: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.automatico p{
+
+    font-size: 2.2em;
+    font-weight: 600;
+    font-family: var(--fuentes-textos);
+    color: var(--color-principal);  
 }
 
 /*Empiezan estilos del footer*/
@@ -442,132 +713,63 @@ aside{
 
     }
 
-        /*Empiezan los estilos del popup*/
+        /*Empiezan los estilos del aside*/
 
-        .popup{
+        .aside{
 
-            
-            position: fixed;
-            top: 0px;
-            left: 0px;
-            right: 0px;
-            bottom: 0px;
             padding-top: 20px;
-            background-color: rgba(0,0,0,0.6);
-            z-index: 1000;
-            display: none;
-            overflow: auto;
             
         }
 
-        /*clase para cuando queramos que se muestre el formulario*/
+        .aside h3{
 
-        .popup.visible{
-
-            display: inline-block;
-            
-
-        }
-
-        /*Clase para que no exista scroll en la pagina web cuando este le popup*/
-
-        .superpuesto{
-
-            overflow: hidden;
-
+            font-size: 2.5em;
+            color: var(--color-principal);
+            font-family: var(--fuentes-titulos);
+            margin: auto;
+            text-align: center;
+            margin-top: 2em;
+            margin-bottom: 1em;
+            max-width: 90%;
 
         }
 
+        .aside span{
 
-        /*Contenedor blanco del pop up*/
+            display: block;
+            margin: auto;
+            font-size: 1.4em;
+            font-family: var(--fuente-neutra);
+            text-align: center;
+            margin-bottom: 2em;
+            max-width: 85%;
+        }
 
-        .popup form{
+
+        /*Formulario*/
+
+        .aside form{
 
             margin: auto;
             text-align: center;
             transition: all 1s ease;
-            background-color: var(--color-principal-claro);
+            background-color: white;
             width: 90%;
             max-width: 750px;
             display: flex;
             flex-wrap: wrap;
-            padding-top: 1em;
+            padding-top: 2em;
             padding-right: 1em;
             padding-left: 1em;
+            padding-bottom: 2.5em;
             border-radius: 5px;
             height: auto;
-            overflow-y: visible;
-            margin-bottom: 1.5em;
+            margin-bottom: 3em;
+
+            box-shadow: 0 0 1rem grey;
                         
         }
 
-
-        /*Boton de salir*/
-
-        #formulario i:hover{
-
-            color: red;
-
-        }
-
-
-        /*Asesoría Gratuita*/
-
-        .popup form h4{
-
-            display: block;
-            width: 100%;
-            font-size: 2.5em;
-            font-family: var(--fuentes-titulos);
-            color: var(--color-principal);
-
-
-        }
-
-        .imagen_formulario img{
-            display: block;
-            width: 100%;
-            height: auto;
-
-        }
-
-        .imagen_formulario{
-
-            display: flex;
-            width: 30%;
-            height: auto;
-            justify-content: center;
-            text-align: center;
-
-        }
-
-        /*Texto introductorio*/
-
-        .aclaraciones{
-            padding-top: 2em;
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: max-content;
- 
-
-        }
-
-        .aclaraciones span{
-
-            display: block;
-            font-family: var(--fuentes-textos);
-            color: var(--color-textos);
-            padding-top: 1em;
-
-        }
-
-        .aclaraciones span b{
-
-            color: black;
-
-        }
 
         /*contenedores de input+label*/
 
@@ -657,18 +859,64 @@ aside{
 
         }
 
-        .espaciado{
-
-            display: block;
-            width: 100%;
-            height: 3em;
-
-        }
+        
 
 
                 /*Empiezan mis media querys*/
 
+    /*Reducimos el espacio en blanco*/
 
+    @media screen and (max-width: 1279px){
+
+        .zona-servicios{
+
+            padding-right: 14%;
+            padding-left: 14%;
+
+        }
+
+
+    }
+
+    /*Reducimos el espacio en blanco en margenes*/
+
+    @media screen and (max-width: 1154px){
+
+        .zona-servicios{
+
+            padding-right: 10%;
+            padding-left: 10%;
+
+        }
+
+        .audiovisual{
+            margin-left: 15%;
+            margin-right: 10%;
+            width: 25%;
+        }
+
+        .automatico{
+            margin-left: 10%;
+            margin-right: 15%;
+            width: 25%;
+        }
+
+
+    }
+
+    /*Reducimos espacio en blanco en margenes*/
+
+    @media screen and (max-width: 1038px){
+
+        .zona-servicios{
+
+            padding-right: 5%;
+            padding-left: 5%;
+
+        }
+
+
+    }
 
     /*Ajustes de espacio del footer*/
 
@@ -696,6 +944,32 @@ aside{
 
     }
 
+    /*Reducimos los margenes en zona de proximamente*/
+
+    @media screen and (max-width: 959px){
+
+        .zona-servicios{
+
+            padding-right: 10%;
+            padding-left: 10%;
+
+        }
+
+        .audiovisual{
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 30%;
+        }
+
+        .automatico{
+            margin-left: 10%;
+            margin-right: 10%;
+            width: 30%;
+        }
+
+
+    }
+
 
 /* ponemos el menu hacia la derecha para que no se pegue al logo*/
 @media screen and (max-width: 950px){
@@ -708,7 +982,19 @@ aside{
 
 }
 
+    /*Quitamos espacio en blanco del grid gap*/
 
+@media screen and (max-width: 923px){
+
+    .zona-servicios{
+
+        gap: 2%;
+        row-gap: 3.3em;
+
+    }
+
+
+}
 
 /*A partir de este tamaño el menu  pasa a ser un menu de hamburguesa*/
 /*Tambien hago un ajuste de la mancha de fondo*/
@@ -773,33 +1059,6 @@ aside{
     }
 }
 
-    /*Quitamos el exceso de padding en la zona de invitacion para que entre mejor el contenido*/
-
-    @media screen and (max-width: 906px){
-
-    .invitacion{
-
-        padding-right: 1em;
-        justify-content: center;
-
-    }
-    
-    .conjunto{
-
-        max-width: 60%;
-
-    }
-
-    .conjunto p, .conjunto h3{
-
-        text-align: center;
-        max-width: 90%;
-
-    }
-
-    }
-
-
 
     /*hago un ajuste a imagen de fondo*/
 
@@ -814,6 +1073,51 @@ aside{
 
 
     }
+
+    /*Reducimos los margenes en zona de proximamente*/
+
+    @media screen and (max-width: 777px){
+
+        .zona-servicios{
+
+            padding-right: 10%;
+            padding-left: 10%;
+
+        }
+
+        .audiovisual{
+            margin-left: 7.5%;
+            margin-right: 7.5%;
+            width: 35%;
+        }
+
+        .automatico{
+            margin-left: 7.5%;
+            margin-right: 7.5%;
+            width: 35%;
+        }
+
+
+    }
+
+    /*Zona servicios, los recuadros pasan a estar uno debajo del otro*/
+
+    @media screen and (max-width: 776px){
+
+        .zona-servicios{
+            
+            padding-left: 25%;
+            padding-right: 25%;
+            column-gap: 0px;
+            row-gap: 4em;
+            grid-template-columns: 1fr;
+            grid-template-areas: "web" "publicidad" "contenidos" "redes";
+    
+        }
+    
+        
+    }
+
     /*Ajustes de espacio en el footer*/
 
     @media screen and (max-width: 770px){
@@ -836,34 +1140,6 @@ aside{
 
     }
 
-
-    /*El boton del call to action pasa a estar debajo del texto*/
-
-    @media screen and (max-width: 712px){
-
-
-        .invitacion{
-
-           flex-wrap: wrap;
-            
-
-        }
-
-        .conjunto{
-
-            max-width: 100%;
-            width: 100%;
-            margin-bottom: 2em;
-
-        }
-
-        .conjunto p, .conjunto h3{
-
-            max-width: 100%;
-
-        }
-
-    }
 
     /*La zona de redes sociales pasa a estar abajo en el footer*/
 
@@ -906,6 +1182,22 @@ aside{
 
     }
 
+    /*zona servicios, reducimos los padding */
+
+    @media screen and (max-width: 650px){
+
+        .zona-servicios{
+            
+            padding-left: 20%;
+            padding-right: 20%;
+            column-gap: 0px;
+
+    
+        }
+    
+        
+    }
+
         /*Ajustes en la disposicion del formulario*/
 
         @media screen and (max-width: 643px){
@@ -936,6 +1228,8 @@ aside{
 
         }
 
+    
+
         /*Tambien hago un ajuste a la imagen de fondo del body*/
 
         @media screen and (max-width: 591px){
@@ -948,6 +1242,39 @@ aside{
             }
     
     
+        }
+
+   /*Reducimos los margenes en zona de proximamente*/
+
+   @media screen and (max-width: 587px){
+
+    .audiovisual{
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+        margin-bottom: 2.5em;
+    }
+
+    .automatico{
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+    }
+
+
+}
+
+        /*Menos padding en zona servicios*/
+
+        @media screen and (max-width: 564px){
+
+            .zona-servicios{
+                
+                padding-left: 15%;
+                padding-right: 15%;
+        
+            }
+            
         }
 
 
@@ -969,8 +1296,26 @@ aside{
 
         }
 
+    /*Disminuimos el tamaño de titulos para que no se vean tan grandes*/
 
-    /*Tambien hacemos que los campos para ingresar datos del foormulario esten uno debajo del otro*/
+    @media screen and (max-width: 499px){
+
+        .aside h3{
+
+            font-size: 2em;
+
+        }
+
+        .aside span{
+
+            font-size: 1em;
+
+        }
+
+    }
+
+
+    /*Tambien hacemos que los campos para ingresar datos del formulario esten uno debajo del otro*/
 
     @media screen and (max-width: 490px){
 
@@ -986,27 +1331,25 @@ aside{
             margin-left: 2.7em;
         }
 
-        .aclaraciones{
+    }
+
+    /*Menos padding en zona servicios  */
+
+    @media screen and (max-width: 484px){
+
+        .zona-servicios{
+            
+            padding-left: 10%;
+            padding-right: 10%;
+    
+        }
+
+        .recuadro{
 
             width: 100%;
 
-
         }
-
-        .aclaraciones span{
-
-            width: 100%;
-
-        }
-
-        .imagen_formulario{
-
-            width: 70%;
-            margin:auto;
-        }
-
         
-
     }
 
 
@@ -1020,8 +1363,66 @@ aside{
 
         }
 
+
     }
 
+    /*Reducimos un poco el tamaño de letra en la zona intro y disminuimos un padding de servicios*/
+
+
+    @media screen and (max-width: 439px){
+
+        .intro-servicios{
+            font-size: 0.8em;
+        }
+
+        .recuadro.web{
+
+            padding-top: 1em;
+
+        }
+
+
+    }
+
+
+
+    /*Reducimos el padding en zona servicios y ajustamos tamaño de los recuadros*/
+
+    @media screen and (max-width: 428px){
+
+        .zona-servicios{
+            
+            padding-left: 8%;
+            padding-right: 8%;
+    
+        }
+
+        .recuadro{
+
+            width: 100%;
+            font-size: 1.1em;
+
+        }
+
+        .recuadro.web{
+
+            font-size: 1.3em;
+        }
+
+
+        .recuadro.contenidos{
+
+            font-size: 1.4em;
+
+        }
+
+        .recuadro.redes{
+
+            font-size: 1.5em;
+
+        }
+        
+    }
    
     /*El logo y texto del footer pasan a estar en lineas aparte ocupando el 100%*/
 
@@ -1055,6 +1456,40 @@ aside{
 
     }
 
+    /*Ajustes de espaciado  y letra en zona servicios*/
+
+    @media screen and (max-width: 413px){
+
+        .zona-servicios{
+            padding-left: 5vw;
+            padding-right: 5vw;
+            grid-template-columns: 90vw;
+            
+
+        }
+    
+        .recuadro.web{
+            font-size: 1.2em;
+             
+ 
+         }
+
+         .audiovisual{
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 70%;
+            margin-bottom: 2.5em;
+        }
+    
+        .automatico{
+            margin-left: 15%;
+            margin-right: 15%;
+            width: 70%;
+        }
+        
+    }
+
+
 
     /*Evitamos que el logo de alquimify empieze a chocar con el menu hamburguesa*/
 
@@ -1076,16 +1511,34 @@ aside{
 
     }
 
-    /*Ajustes de tipo de letra  para tamaños mas pequeños*/
 
-    @media screen and (max-width: 365px){
+    /*Reducimos tamaño de fuente en zona servicios*/
 
+    @media screen and (max-width: 379px){
 
-        .aclaraciones{
-
-            margin-bottom: 1em;
+        .recuadro.publicidad{
+           font-size: 1em;
+            
 
         }
+
+    }
+
+        /*Reducimos tamaño de fuente en zona servicios*/
+
+        @media screen and (max-width: 374px){
+
+            .recuadro.contenidos{
+               font-size: 1.35em;
+               padding-top: 1.2em;
+    
+            }
+
+        }
+
+    /*Ajustes tamaño del formulario*/
+
+    @media screen and (max-width: 365px){
 
         #formulario{
 
@@ -1093,3 +1546,64 @@ aside{
         }
 
     }
+
+        /*Reducimos tamaño de fuente en zona servicios*/
+
+        @media screen and (max-width: 361px){
+
+            .recuadro.contenidos{
+               font-size: 1.2em;
+    
+            }
+
+        }
+
+        /*Reducimos tamaño de fuente en zona servicios*/
+
+        @media screen and (max-width: 355px){
+
+            .recuadro.redes{
+               font-size: 1.35em;
+               padding-top: 1.2em;
+    
+            }
+
+            .recuadro.redes li{
+
+                font-size: 0.9em;
+
+            }
+        }
+    
+        /*Reducimos tamaño de fuente en zona servicios*/
+
+        @media screen and (max-width: 345px){
+
+            .recuadro.publicidad{
+               font-size: 0.9em;
+                
+    
+            }
+        }
+
+        /*Reducimos tamaño de fuente en zona servicios*/
+
+        @media screen and (max-width: 337px){
+
+            .recuadro.recuadro.web{
+               font-size: 1.1em;
+                
+    
+            }
+        }
+
+        /*Reducimos tamaño de fuente en zona servicios*/
+
+        @media screen and (max-width: 322px){
+
+            .recuadro.contenidos{
+               font-size: 1.1em;
+    
+            }
+
+        }
