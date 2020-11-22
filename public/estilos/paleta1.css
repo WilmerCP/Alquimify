@@ -1,0 +1,2180 @@
+:root{
+
+    --color-fondo: transparent;
+
+    --color-principal:#4a4474;
+    --color-principal-claro:#efedfc;
+    --color-principal-alternativo:#776eaf;
+
+
+    --acento-claro:#e45b6d;
+    --acento-oscuro:crimson;
+
+    --color-cta:#624AD8;
+
+    --color-textos:rgb(68, 67, 67);
+    --color-titulos:black;
+
+    --fuentes-textos: 'Nunito',sans-serif;
+    --fuentes-titulos: 'Faustina', sans-serif;
+    --fuente-neutra:  'Lato', sans-serif;
+    --fuente-logo:  'Grandstander', Arial, Helvetica, sans-serif;
+    --fuente-inicio: Arial;
+
+    
+}
+
+
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+
+}
+
+/*Pongo una imagen de fondo en el documento*/
+
+body{
+
+    background-image: url(../imagenes/mancha.svg);
+    background-repeat: no-repeat;
+    background-position-y: -300px;
+    background-position-x: 500px;
+    background-size: 100%;
+    
+
+}
+
+/*Le quito los estilos feos a los links y li*/
+
+a{
+
+    text-decoration: none;
+
+}
+
+
+
+li{
+
+    list-style: none;
+
+}
+
+
+/*Estilos de mi boton de menu hamburguesa*/
+
+.hamburguesa{
+
+    display: inline-block;
+    font-size: 30px;
+    position: fixed;
+    top: 0px;
+    right: -100px;
+    z-index: 900;
+    background-color: var(--acento-claro);
+    border-radius: 50%;
+    color: white;
+    width: 60px;
+    height: 60px;
+    margin-right:15px;
+    margin-top: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+
+
+
+/*Estilos de mi header*/
+
+.header{
+padding: 1em;
+padding-top: 0.9em;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-size: 0.8rem;
+position: sticky;
+top: 0px;
+}
+
+/*Clase para el header sticky cuando estamos bajando por la pantalla */
+
+
+.header.cambio{
+
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    background-color: var(--color-principal);
+    font-size: 0.6rem;
+
+}
+
+.header.cambio .menu-principal{
+
+    font-size: 1.2em;
+    margin-right: 0em;
+
+}
+
+.header.cambio > nav > a {
+
+    color: white;
+
+    
+}
+
+.header.cambio .boton{
+
+    background-color: var(--acento-claro);
+    color: white;
+
+    
+}
+
+.header.cambio .boton:hover{
+
+    background-color: var(--acento-oscuro);
+    color: white;
+
+    
+}
+
+
+
+
+.header.cambio > figure > h1, .cambio > figure > h2{
+
+    color: white;
+
+}
+
+
+
+/*conjunto de imagen y texto de la marca*/
+.marca{
+
+    width: 30%;
+    margin-top: 1em;
+    margin-left: 1em;
+    position: relative;
+    transition: all 1s ease 0s;
+    
+
+}
+
+/*Estilos de mi logo uno*/
+.logo-1>img{
+
+    width: 100%;
+    height: auto;
+
+}
+
+.logo-1{
+
+    width: 6em;
+    float:left;
+
+}
+
+/*alquimify*/
+.marca>h2{
+
+    color: var(--color-principal);
+    font-family: var(--fuente-logo);
+    font-size: 2.7em;
+    margin-top: 0.1em;
+    position: absolute;
+    left: 2.6em;
+
+}
+
+/*Marketing Digital*/
+
+h1{
+
+    color: var(--color-principal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    position: absolute;
+    left: 8.8em;
+    top: 3em;
+}
+
+/*Estilos de mi menu principal*/
+
+.menu-principal{
+
+    margin-right: 3em;
+
+
+}
+
+.menu-principal>a, .boton1{
+
+    margin-right: 3em;
+    color: var(--color-principal);
+    font-family: 'Nunito',sans-serif;
+    font-weight: 500;
+    font-size: 1.3em;
+
+
+}
+
+.menu-principal>a:hover{
+
+    color:black;
+
+}
+
+
+
+
+/*Estilos iniciales para los botones, después en cada uno se modifican detalles*/
+
+.boton{
+
+    display: inline-block;
+    font-family: 'Nunito',sans-serif;
+    font-weight: 800;
+    color: white;
+    padding: 0.9em;
+    background-color: var(--acento-claro);
+    border-radius: 34px;
+    transition: all 1s ease;
+    
+
+}
+
+.boton1{
+
+    border: none;
+
+}
+
+.boton:hover{
+
+    background-color: var(--acento-oscuro);
+    color: white;
+}
+
+    /*Empiezan los estilos de la parte de inicio*/
+
+    
+.inicio{
+
+    width:100%;
+    padding-top: 30px;
+    padding-left: 110px;
+    padding-bottom: 4.4em;
+    height: auto;
+    min-height: max-content;
+    border-bottom: solid 1px var(--color-principal);
+   
+}
+
+.inicio>span{
+
+    font-family: var(--fuente-neutra);
+    font-weight: bold;
+    color: var(--color-textos);
+    font-size: 1.2em;
+
+}
+
+.inicio>h2{
+
+    margin-top: 16px;
+    font-family: var(--fuente-inicio);
+    font-size: 3.5em;
+    max-width: 40%;
+    color: var(--color-principal);
+
+}
+
+.inicio>p{
+
+    margin-top: 25px;
+    font-family: var(--fuentes-textos);
+    color: var(--color-textos);
+    max-width: 50%;
+    font-size: 1em;
+}
+
+.boton2{
+
+    font-size: 22px;
+    margin-top: 45px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    border: none;
+
+}
+
+.boton2:hover{
+
+    background-color: var(--acento-oscuro);
+    color: white;
+}
+
+    /*¿Por qué es importante?*/
+
+    .importancia{
+
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3em;
+        padding-top: 3em;
+        align-items: center;
+       
+    }
+
+    .importancia p{
+
+        color: var(--color-textos);
+        font-family: var(--fuente-neutra);
+        font-size: 1.4em;
+        text-align: center;
+        width: 100%;
+        margin-top: 2em;
+
+    }
+
+    .importancia div{
+        
+        width: 90%;
+        max-width: 800px;
+        
+        
+
+    }
+
+
+    .importancia div:first-child{
+
+        margin-top: 0em;
+
+    }
+
+    .importancia b{
+
+        text-decoration: underline;
+        text-decoration-color: red;
+        color: black;
+        
+
+    }
+
+    .imagen-importancia{
+
+        display: block;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+
+
+    }
+
+    .imagen-importancia img{
+
+        width: 100%;
+        height: auto;
+
+    }
+
+
+
+    /*Menu secundario: Soy una marca - Soy un profesional*/
+
+.menu-secundario{
+
+    transition: all 1s ease 0s;
+    position: relative;
+    position: sticky;
+    top: 0px;
+    display: block;
+    width: 100%;
+    background-color: var(--color-principal);
+    padding-top: 1.4em;
+    padding-bottom: 1.4em;
+    z-index: 90;
+
+    box-shadow:  1px -2px 3px rgba(0,0,0,.4),
+                 1px 2px 2px rgba(0,0,0,.8);
+
+    
+}
+
+.menu-secundario.cambio{
+ 
+    background-color: #da3b50ce;
+    padding: 0em;
+    box-shadow: none;
+}
+
+
+
+.menu-secundario.cambio a{
+
+    font-size: 1.2em;
+    padding-bottom: 0.4em;
+    padding-top: 0.4em;
+    transition: all 1s ease 0s;
+    
+}
+
+.menu-secundario.cambio a:hover{
+
+    background-color: rgba(220, 20, 60, 0.742);
+    
+}
+
+
+
+.menu-secundario nav{
+
+    display: block;
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.menu-secundario::before{
+
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 2px;
+    background-color: white;
+    left: 50%;
+    top: 0px;
+
+}
+
+.menu-secundario a{
+    display: inline-block;
+    font-size: 1.6em;
+    font-family: var(--fuentes-textos);
+    color: white;
+    text-shadow: 2px 2px 2px black;
+
+}
+
+
+    /*Empieza la seccion soy una marca*/
+
+    /*Lo que es la intro se repite los mismos estilos para marca y profesional*/
+
+    /*Soy una marca*/
+    
+
+    .intro h3{
+
+        font-family: var(--fuentes-titulos);
+        color: black;
+        display: block;
+        text-align: center;
+        font-size: 2.8em;
+        margin-bottom: 1em;
+    } 
+
+    .intro{
+
+        display: block;   
+        padding-top: 2em;
+
+    }
+
+    .intro>div{
+
+        background-color: white;
+        margin: auto;
+        width: 70%;
+        box-shadow: 0 0 0.5rem grey;
+        border-radius: 0.5em;
+        display: grid;
+        grid-template-columns: "uno dos dos dos";
+        position: relative;
+        z-index: 2;
+    }
+
+    .info-intro{
+
+        display: inline-block;
+        position: relative;
+        padding-bottom: 1em;
+        padding-top: 1em;
+        padding-right: 2.3em;
+        padding-left: 2em;
+        grid-area: dos;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        
+    }
+
+    .info-intro h4{
+
+       font-family: var(--fuentes-textos);
+       font-size: 1.5em;
+       margin-bottom: 1em;
+
+    }
+
+    .info-intro p{
+
+       font-family: var(--fuentes-textos);
+       text-align: justify;
+       font-size: 1.2em;
+        
+    }
+
+    .info-intro::before{
+
+        content: "";
+        display: block;
+        position: absolute;
+        background-color: var(--color-principal);
+        top: 0px;
+        left: 0px;
+        bottom: 0px;
+        width: 1em;
+        
+    }
+    
+    .imagen-intro{
+
+        width: auto;
+        height: auto;
+        background-color: var(--color-principal-claro);
+        grid-row: uno;
+        max-width: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .imagen-intro img{
+
+        width: 100%;
+        height: auto;
+
+    }
+
+    .intro-marca{
+
+        background-color: var(--color-principal-claro);
+
+    }
+
+
+    /*En que podemos ayudarte*/
+
+.empresa{
+
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    padding-top: 5em;
+    padding-bottom: 6em;
+    background-color: var(--color-principal-claro);
+    
+}
+
+.imagen-1{
+    display:inline-block;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.imagen-1>img{
+
+    width: 60%;
+    height: auto;
+
+
+
+}
+
+.empresa div{
+
+    display: inline-block;
+    width: 50%;
+    padding-right: 3rem;
+
+
+}
+
+.empresa h3{
+
+    font-family: var(--fuentes-titulos);
+    font-weight: 500;
+    font-size: 2.7em;
+    color: var(--color-titulos);
+    width: 100%;
+    text-align: start;
+    padding-left: 2em;
+    margin-bottom: 15px;
+    
+
+}
+
+.empresa li{
+
+    font-family: var(--fuentes-textos);
+    font-size: 1.1em;
+    position: relative;
+    line-height: 4rem;
+    color: var(--color-textos);
+    text-align: start;
+    padding-left: 7em;
+   
+    
+
+}
+
+.empresa-1::before{
+
+    content: "";
+    display: block;
+    background-color: var(--color-principal);
+    width: 6px;
+    height: 300px;
+    position: absolute;
+    left: 6em;
+    top: 1px;
+
+}
+
+
+/*Agrego sombra entre zona marca  y zona profesional*/
+
+.intro-profesional{
+
+    box-shadow: 0 -8px 8px -5px rgb(182, 182, 182);
+}
+
+
+/*Estilos de la zona de soy un profesional*/
+
+.profesional{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 4rem;
+    padding-bottom: 7rem;
+    background-color: var(--color-fondo);
+    
+
+}
+
+.profesional>div{
+
+    width: 50%;
+    padding-top: 4rem;
+
+
+}
+
+.profesional h3{
+
+    font-family: var(--fuentes-titulos);
+    font-weight: 500;
+    font-size: 2.7em;
+    color: var(--color-titulos);
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 40px;
+    
+
+}
+
+.profesional li{
+
+    font-family: var(--fuentes-textos);
+    font-size: 1.1em;
+    position: relative;
+    line-height: 4rem;
+    color: var(--color-textos);
+    margin-left: 4em;
+    
+
+}
+
+.profesional-1::before{
+
+    content: "";
+    display: block;
+    background-color: var(--acento-claro);
+    margin-right: 4rem;
+    width: 6px;
+    height: 250px;
+    position: absolute;
+    left: -20px;
+    top: -10px;
+
+}
+
+.imagen-2{
+    display: inline-block;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.imagen-2>img{
+
+    width: 65%;
+    height: auto;
+
+
+}
+
+
+/*Empiezan los estilos de mi aside*/
+
+
+aside{
+
+
+    background-color: var(--color-fondo);
+    padding-bottom: 5rem;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+/*Estilos de mi call to action*/
+
+
+.invitacion{
+
+    display: inline-block;
+    display: flex;
+
+    justify-content: space-between;
+
+    background: white;
+    width: 80%;
+    margin-top: 2.5rem;
+    padding: 1.25rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 4rem;
+
+    box-shadow: 0 0 1.25rem grey;
+
+}
+
+.conjunto{
+
+    max-width: 75%;
+    text-align: center;
+
+}
+.conjunto>h3{
+
+    font-family: 'Nunito',Arial,sans-serif;
+    margin-bottom: 1rem;
+    color: var(--color-titulos);
+}
+
+.conjunto>p{
+
+    font-family: var(--fuentes-textos);
+    color: var(--color-textos);
+    margin-bottom: 0.6em;
+
+}
+
+.conjunto>p:first-of-type{
+
+    color: black;
+    font-style: italic;
+    margin-bottom: 0.8em;
+    
+
+}
+
+.conjunto b{
+
+    color: black;
+
+}
+
+.boton3{
+
+    display: inline-block;
+    display: flex;
+    width: 13rem;
+    color: white;
+    background-color: var(--acento-claro);
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    border: none;
+    box-shadow: 0 0 15px grey;
+    height: max-content;
+    align-self: center;
+    text-align: center;
+
+
+}
+
+.boton3:hover{
+
+    background-color: var(--acento-oscuro);
+
+}
+
+.boton3:active{
+
+    box-shadow: none;
+
+}
+
+/*Empiezan estilos del footer*/
+
+    .footer{
+
+    background-color: var(--color-principal);
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    padding-right: 2em;
+    padding-left: 2em;
+
+    }
+
+    .logo-2{
+
+    width: 12%;
+    height: auto;
+
+    }
+
+    .logo-2 img{
+
+    max-width: 85%;
+    height: auto;
+
+    }
+
+    .texto-footer{
+
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-right: 4.5em;
+        padding-left: 2em;
+    
+    }
+
+    .texto-footer a{
+
+        color: white;
+
+    }
+
+    .derechos{
+
+        font-size: 1em;
+        font-family: 'Verdana';
+        color: white;
+
+    }
+
+    .creditos{
+
+        font-size: 1em;
+        font-family: 'Verdana';
+        
+    }
+
+    .sociales{
+
+        width: 28%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+    }
+
+    .sociales > [class^="icon-"]{
+
+        font-size: 4.2em;
+        color: white;
+
+    }
+
+    .sociales span{
+
+        color: white;
+        font-family: 'Nunito';
+        font-size: 1.3em;
+        font-weight: 600;
+        margin-top: 1em;
+
+    }
+
+        /*Empiezan los estilos del popup*/
+
+        .popup{
+
+            
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            right: 0px;
+            bottom: 0px;
+            padding-top: 20px;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 1000;
+            display: none;
+            overflow: auto;
+            
+        }
+
+        /*clase para cuando queramos que se muestre el formulario*/
+
+        .popup.visible{
+
+            display: inline-block;
+            
+
+        }
+
+        /*Clase para que no exista scroll en la pagina web cuando este le popup*/
+
+        .superpuesto{
+
+            overflow: hidden;
+
+
+        }
+
+
+        /*Contenedor blanco del pop up*/
+
+        .popup form{
+
+            margin: auto;
+            text-align: center;
+            transition: all 1s ease;
+            background-color: var(--color-principal-claro);
+            width: 90%;
+            max-width: 750px;
+            display: flex;
+            flex-wrap: wrap;
+            padding-top: 1em;
+            padding-right: 1em;
+            padding-left: 1em;
+            border-radius: 5px;
+            height: auto;
+            overflow-y: visible;
+            margin-bottom: 1.5em;
+                        
+        }
+
+
+        /*Boton de salir*/
+
+        #formulario i:hover{
+
+            color: red;
+
+        }
+
+
+        /*Asesoría Gratuita*/
+
+        .texto-formulario{
+            display: flex;
+            width: 70%;
+            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .popup form h4{
+
+            display: block;
+            width: 100%;
+            font-size: 2.7em;
+            font-family: var(--fuentes-titulos);
+            color: var(--color-principal);
+            margin-top: 1em;
+
+
+        }
+
+        .texto-formulario p{
+
+            width: 100%;
+            font-family: var(--fuentes-textos);
+            margin-top: 1.2em;
+            color: var(--color-textos);
+
+        }
+
+        .imagen_formulario img{
+            display: block;
+            width: 100%;
+            height: auto;
+
+        }
+
+        .imagen_formulario{
+
+            display: flex;
+            width: 25%;
+            height: auto;
+            justify-content: center;
+            text-align: center;
+
+        }
+
+        /*contenedores de input+label*/
+
+        .grupo{
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 1.5em;
+
+        }
+
+        /*Textos de cada label*/
+
+        .grupo label{
+
+            font-family: var(--fuente-neutra);
+            font-weight: 600;
+            font-size: 1.4em;
+            margin-bottom: 0.6em;
+            text-align: left;
+            margin-left: 1.8em;
+        }
+
+        .grupo input, .grupo select{
+
+            width: 90%;
+            max-width: 270px;
+            height: 2.8em;
+            margin: auto;
+            padding-left: 1em;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+        }
+
+        .grupo input, .grupo select, .grupo textarea{
+
+            font-family: var(--fuentes-textos);
+            border-radius: 0.5em;
+            border-style: solid;
+            border-color: var(--color-principal);
+        } 
+
+        /*Grupo que contiene el campo pais*/
+
+        .grupo.penultimo_grupo{
+
+            margin: auto;
+            margin-top: 1.5em;
+
+        }
+
+        /*Ultimo grupo que contiene el campo para dejar un mensaje*/
+
+        .grupo.ultimo_grupo{
+
+            width: 60%;
+
+        }
+
+        .grupo.ultimo_grupo textarea{
+
+            width: 90%;
+            max-width: 400px;
+            margin: auto;
+            resize: none;
+            padding: 0.5em;
+
+        }
+
+        #boton_enviar{
+
+            margin: auto;
+            align-self: center;
+            border: none;
+            padding: 0.9em;
+            border-radius: 1.6em;
+            font-size: 1.5em;
+            background-color: var(--acento-claro);
+
+        }
+
+        #boton_enviar:hover{
+
+            background-color: var(--acento-oscuro);
+
+        }
+
+        .espaciado{
+
+            display: block;
+            width: 100%;
+            height: 3em;
+
+        }
+
+
+                /*Empiezan mis media querys*/
+
+    /*Permitimos mayor extensión al titulo*/
+
+    @media screen and (max-width: 1291px){
+
+        .empresa div{
+
+            width: 60%;
+
+        }
+
+        .empresa figure{
+
+            width: 40%;
+        }
+
+        .imagen-1 > img{
+
+            width: 80%;
+
+        }
+    }
+
+
+    /*Ajustes de tamaño en zona empresa, le damos mas tamaño al texto y menos a la imagen*/
+
+    @media screen and (max-width: 1075px){
+
+        .empresa div{
+
+            width: 70%;
+
+        }
+
+        .empresa figure{
+
+            width: 30%;
+
+        }
+
+        .imagen-1 img{
+
+            width: 100%;
+
+        }
+
+
+    }
+                
+    /*Ajustes de tamaño en zona profesionales*/
+
+    @media screen and (max-width: 1068px){
+
+        .profesional{
+
+            font-size: 0.99rem;
+
+        }
+
+        .profesional>div{
+
+            width: 60%;
+
+        }
+
+        .imagen-2{
+
+            width: 40%;
+
+        }
+
+        .imagen-2>img{
+
+            width: 80%;
+
+        }
+
+    }
+
+
+    /*Quitamos el exceso de padding en la zona de invitacion para que entre mejor el contenido*/
+
+    @media screen and (max-width: 1067px){
+
+        .invitacion{
+    
+            padding-right: 1em;
+            justify-content: center;
+    
+        }
+        
+        .conjunto{
+    
+            max-width: 60%;
+    
+        }
+    
+        .conjunto p, .conjunto h3{
+    
+            text-align: center;
+            max-width: 90%;
+    
+        }
+    
+        }
+    
+    
+
+    /*Ajustes de espacio del footer*/
+
+    @media screen and (max-width: 1027px){
+
+        .texto-footer{
+
+            width: 50%;
+
+        }
+
+        .sociales{
+
+            width: 38%;
+
+        }
+
+        .sociales span{
+
+            margin-top: 0.6em;
+        
+           }
+
+
+
+    }
+
+
+    
+    /*Pequeño ajuste del texto para que no se vea feo*/
+    @media screen and (max-width: 1013px){
+
+    .inicio{
+
+        font-size: 1rem;
+
+    }
+
+}
+
+/*Ajustes de tamaño de imagen en zona de empresa*/
+
+
+@media screen and (max-width: 983px){
+
+    .empresa div{
+
+        width: 60%;
+
+    }
+
+    .empresa .imagen-1{
+
+        width: 40%;
+
+
+    }
+
+    .imagen-1 img{
+
+        width: 100%;
+
+
+    }
+
+    .empresa div{
+
+        padding-right: 0px;
+
+    }
+
+    .empresa li{
+
+        padding-left: 4em;
+
+    }
+
+    .empresa h3{
+
+        padding-left: 1em;
+        
+    }
+
+    .empresa-1::before{
+
+     left: 3em;
+
+    }
+
+
+}
+
+
+
+/* ponemos el menu hacia la derecha para que no se pegue al logo*/
+@media screen and (max-width: 950px){
+
+   .menu-principal{
+
+    margin-right: 0px;
+
+   }
+
+   .intro div{
+       width: 90%;
+       font-size: 0.9rem;
+   }
+
+   .info-intro{
+
+    padding-right: 0px;
+    
+   }
+
+   .intro-marca div, .intro-profesional div{
+
+    grid-template-columns:  29% 71%;
+
+   }
+
+   .intro-marca .imagen-intro, .intro-profesional .imagen-intro{
+
+    width: 100%;
+    grid-column: 1/2;
+   }
+
+   .intro-marca .info-intro, .intro-profesional .info-intro{
+
+    grid-column: 2/3;
+   }
+}
+
+
+
+/*A partir de este tamaño el menu  pasa a ser un menu de hamburguesa*/
+/*Tambien hago un ajuste de la mancha de fondo*/
+
+@media screen and (max-width: 920px){
+
+    .menu-principal{
+        display: flex;
+        position: fixed;
+        top: -100vh;
+        left: 0px;
+        width: 100vw;
+        height: 100vh;
+        background-color:  rgba(74,68,116,0.95);
+        z-index: 500;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+        transition: 0.9s;
+    }
+
+    .menu-principal.visible{
+
+        top: 0px;
+
+    }
+
+
+    .menu-principal a, .menu-principal .boton1{
+
+        font-size: 2em;
+        margin-right: 0px;
+        color: white;
+
+    }
+
+    .cambio > nav > a {
+
+        color: white;
+        margin-right: 0px;
+    }
+
+    .hamburguesa{
+
+        right: 0px;
+
+    }
+
+    body{
+
+        background-position-y: -250px;
+        background-position-x: 400px;
+
+    }
+
+    .marca{
+
+        width: 80%;
+
+    }
+}
+
+
+    /*Zona de profesionales, pasamos a que la imagen y contenido esten uno abajo de otro*/
+
+    @media screen and (max-width: 880px){
+
+        .profesional{
+
+            padding-bottom: 1em;
+            padding-top: 1em;
+
+        }
+
+        .profesional>div{
+
+            width: 100%;
+
+        }
+
+        .profesional h3{
+
+            text-align: center;
+            padding-left: 0px;
+
+        }
+
+        .profesional li{
+
+            text-align: center;
+            margin-left: 0px;
+
+        }
+
+        .imagen-2{
+
+            width: 100%;
+        }
+
+        .imagen-2>img{
+
+            width: 50%;
+
+        }
+
+    }
+
+
+
+    /*Ajustes de texto en la zona inicio */
+    /*Tambien hago un ajuste a imagen de fondo*/
+
+    @media screen and (max-width: 832px){
+
+        .inicio>h2{
+
+            max-width: 60%;
+
+        }
+
+        .inicio>p{
+
+            max-width: 65%;
+
+        }
+
+        body{
+            background-position-y: -200px;
+            background-position-x: 300px;
+
+        }
+
+
+    }
+
+    /*A partir de esta resolucion para abajo le quitamos tamaño de fuente en zona empresa*/
+
+    @media screen and (max-width: 819px){
+
+        .empresa{
+
+            font-size: 0.9rem;
+
+        }
+
+
+    }
+
+    /*La zona empresa pasa a tener la imagen encima del contenido*/
+
+    @media screen and (max-width: 790px){
+
+
+        .empresa div{
+
+            width: 100%;
+            padding-right: 0px;
+            text-align: center;
+            font-size: 1rem;
+
+        }
+        
+        .empresa .imagen-1{
+
+            width: 100%;
+
+        }
+
+        .imagen-1 img{
+
+            width: 45%;
+
+        }
+
+        .empresa div li{
+            display: block;
+            margin-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+            padding-left: 0px;
+        }
+
+        .empresa h3{
+
+            display: block;
+            text-align: center;
+            font-size: 3.1em;
+            padding-left: 0px;
+
+        }
+
+        .empresa-1::before{
+
+            opacity: 0;
+
+        }
+
+    }
+
+    /*Ajustes de espacio en el footer*/
+
+    @media screen and (max-width: 770px){
+
+        .texto-footer{
+
+            padding-right: 1em;
+            width: 45%;
+
+        }
+
+        .sociales{
+
+            width: 43%;
+
+        }
+
+        
+
+
+    }
+
+
+    /*El boton del call to action pasa a estar debajo del texto*/
+
+    @media screen and (max-width: 712px){
+
+
+        .invitacion{
+
+           flex-wrap: wrap;
+            
+
+        }
+
+        .conjunto{
+
+            max-width: 100%;
+            width: 100%;
+            margin-bottom: 2em;
+
+        }
+
+        .conjunto p, .conjunto h3{
+
+            max-width: 100%;
+
+        }
+
+    }
+
+    /*La zona de redes sociales pasa a estar abajo en el footer*/
+
+    @media screen and (max-width: 699px){
+
+        .logo-2{
+
+            width: 25%;
+
+        }
+
+        .logo-2 img{
+
+            max-width: 6em;
+        }
+
+        .texto-footer{
+
+            width: 75%;
+            font-size: 1em;
+            padding: 0px;
+            text-align: center;
+        }
+
+        .sociales{
+
+            margin-top: 2em;
+            width: 100%;
+            justify-content: center;
+
+        }
+
+        .sociales [class^="icon-"]{
+
+            font-size: 3em;
+            margin-right: 0.5em;
+            margin-left: 0.5em;
+
+        }
+
+    }
+
+        /*Ajustes en la disposicion del formulario*/
+
+        @media screen and (max-width: 643px){
+
+            #boton_enviar{
+
+                margin-top: 2em;
+            }
+
+            .grupo.ultimo_grupo{
+
+                width: 100%;
+
+
+            }
+
+            .grupo label{
+
+                margin-left: 1em;
+
+            }
+
+            .grupo.ultimo_grupo label{
+
+                margin-left: 2.8em;
+
+            }
+
+        }
+
+
+        @media screen and (max-width: 622px){
+
+
+            .texto-formulario{
+
+                width: 100%;
+    
+    
+            }
+    
+    
+            .imagen_formulario{
+    
+                width: 60%;
+                margin:auto;
+            }
+
+        }
+
+        /*Ajustes de texto y centrado en la zona inicio */
+        /*Tambien hago un ajuste a la imagen de fondo del body*/
+
+        @media screen and (max-width: 591px){
+
+            .inicio{
+
+                padding-left: 0px;
+
+
+            }
+
+            .inicio>span{
+    
+                max-width: 70%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+
+            .inicio>h2{
+    
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+    
+            .inicio>p{
+    
+                max-width: 70%;
+                margin-left: auto;
+                margin-right: auto;
+    
+            }
+
+            .boton2{
+
+                display: block;
+                width: max-content;
+                margin-left: auto;
+                margin-right: auto;
+                
+
+            }
+
+            body{
+                background-position-y: -100px;
+                background-position-x: 200px;
+    
+            }
+    
+    
+        }
+
+        /*La tarjeta de intro en zona marca pasa a estar vertical*/
+
+        @media screen and (max-width: 579px){
+
+            .intro-marca div{
+
+            grid-template-areas: "imagen imagen "
+                                  "texto texto ";
+            overflow: hidden;
+            
+
+
+            }
+
+            .intro-marca .imagen-intro{
+
+                grid-area: imagen;
+                margin: auto;
+                width: 100%;
+
+            }
+
+            .intro-marca .info-intro{
+
+                grid-area: texto;
+                background-color: white;
+                border-top: solid 2px var(--color-principal);
+            }
+
+
+        }
+
+        /*Ajuste al label del text area*/
+        /*Ajuste  imagen de fondo del body*/
+
+        @media screen and (max-width:560px){
+
+            .grupo.ultimo_grupo label {
+                margin-left: 1.2em;
+            }
+
+            body{
+                background-position-y: 300px;
+                background-position-x: 60px;
+                background-size: 120%;
+            }
+
+
+        }
+
+/*La tarjeta de intro en zona profesionales pasa a estar vertical*/
+
+@media screen and (max-width: 520px){
+
+    .intro-profesional div{
+
+    grid-template-areas: "imagen imagen "
+                          "texto texto ";
+    overflow: hidden;
+    
+
+
+    }
+
+    .intro-profesional .imagen-intro{
+
+        grid-area: imagen;
+        margin: auto;
+        width: 100%;
+
+    }
+
+    .intro-profesional .info-intro{
+
+        grid-area: texto;
+        background-color: white;
+        border-top: solid 2px var(--color-principal);
+    }
+
+
+}
+
+    /*Evitamos que el texto toque los bordes, y ajuste de imagen*/
+    /*Tambien hacemos que los campos para ingresar datos del foormulario esten uno debajo del otro*/
+
+    @media screen and (max-width: 490px){
+
+        .profesional{
+
+            font-size: 0.9rem;
+
+        }
+
+        .imagen-2>img{
+
+            width: 60%;
+
+        }
+
+        .grupo{
+
+            width: 100%;
+
+
+        }
+
+        .grupo label{
+
+            margin-left: 2.7em;
+        }
+
+        .aclaraciones{
+
+            width: 100%;
+
+
+        }
+
+        .aclaraciones span{
+
+            width: 100%;
+
+        }
+
+        .imagen_formulario{
+
+            width: 70%;
+            margin:auto;
+        }
+
+        
+
+    }
+
+    /*Ajuste de tamaño de texto en zona empresa*/
+
+    @media screen and (max-width: 472px){
+
+        .empresa div{
+
+            font-size: 0.9rem;
+
+        }
+
+    }
+
+    /*Reducimos tamaño del texto en zona texto footer*/
+
+    @media screen and (max-width: 460px){
+
+        .texto-footer{
+
+            font-size: 0.85em;
+
+        }
+
+    }
+
+    /*ajustamos el tamaño de la imagen del formulario*/
+
+    @media screen and (max-width: 440px){
+
+       
+
+        .imagen_formulario{
+    
+            width: 70%;
+            margin:auto;
+        }
+
+    }
+
+    /*Evitamos que el texto toque los bordes*/
+    /*Ajuste tamaño del texto al menu secundario */
+
+    @media screen and (max-width: 435px){
+
+        .profesional li{
+
+            max-width: 90%;      
+            line-height: 1rem;
+            margin: auto;  
+            margin-bottom: 3rem;  
+             
+
+        }
+
+        .empresa ul{
+
+            padding-left: 5%;
+            padding-right: 5%;
+            
+        }
+
+        .empresa-1::before{
+
+            opacity: 1;
+            left: -5%;
+
+        }
+
+        .empresa li{
+
+            line-height: initial;
+            margin-top: 2em;
+
+        }
+
+        .menu-secundario{
+
+            font-size: 0.8em;
+        }
+
+        .menu-secundario a{
+
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+
+
+    }
+
+    @media screen and (max-width: 428px){
+
+        .importancia p{
+
+            font-size: 1.1em;
+
+        }
+
+        .imagen-importancia{
+
+            width: 80%;
+
+        }
+
+    }
+
+    /*El logo y texto del footer pasan a estar en lineas aparte ocupando el 100%*/
+
+    @media screen and (max-width: 424px){
+
+        .logo-2{
+
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-2 img{
+
+            width: 50%;
+
+        }
+
+        .texto-footer{
+            margin-top: 1em;
+            width: 100%;
+
+        }
+
+        .creditos{
+
+            margin-top: 0.8em;
+
+        }
+
+
+    }
+
+
+    /*Arreglamos el texto en resoluciones pequeñas en inicio*/
+    /*Evitamos que texto toque los bordes en seccion de marca*/
+
+    @media screen and (max-width: 412px){
+
+        .inicio{
+
+            text-align: center;
+
+        }
+
+        .inicio > h2{
+
+            max-width: 80%;
+
+        }
+
+        .empresa ul{
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+
+        }
+        .empresa-1::before{
+
+            position: absolute;
+            left: -52%;
+
+        }
+
+
+    }
+
+    /*Reducimos tamaño de h3 en empresa para que no choque con los bordes*/
+
+    @media screen and (max-width: 396px){
+
+        .empresa div h3{
+
+            font-size: 2.9em;
+
+        }
+
+    }
+
+
+    /*Evitamos que el logo de alquimify empieze a chocar con el menu hamburguesa*/
+
+    @media screen and (max-width: 385px){
+
+        .header{
+
+            font-size: 0.6rem;
+
+        }
+
+        .hamburguesa{
+
+            margin-top: 15px;
+            margin-right: 20px;
+
+        }
+
+
+    }
+
+    /*Ajustes de tipo de letra  para tamaños mas pequeños, zona profesionales* y zona empresa*/
+
+    @media screen and (max-width: 365px){
+
+        .profesional h3{
+
+             font-size: 2em;
+             
+
+        }
+
+        .empresa div{
+
+            font-size: 0.8rem;
+
+        }
+
+        .aclaraciones{
+
+            margin-bottom: 1em;
+
+        }
+
+        #formulario{
+
+            width: 95%;
+        }
+
+    }
+
+    @media screen and (max-width: 349px){
+
+        .menu-secundario .soymarca{
+
+            padding-right: 20px;
+            padding-left: 20px;
+        
+
+        }
+
+
+    }
+

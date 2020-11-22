@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquimify - Marketing Digital</title>
+    <link rel="shortcut icon" href="imagenes/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="estilos/normalize.css">
+    <link rel="stylesheet" href="estilos/iconos.css">
+    
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Grandstander:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Faustina:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="estilos/servicios.css">
+
+
+</head>
+<body id="body">
+
+    <!-- Mi menu hamburguesa -->
+
+    <i class="icon-menu hamburguesa" id="hamburguesa"></i>
+
+        <!-- Mi header -->
+        <header class="header" id="header">
+            
+            <!--Contenedor que reune lo relacionado a la marca Alquimify -->
+            <figure class="marca">
+                <figure class="logo-1"><img src="imagenes/logo.png" alt="Logo"></figure>
+                <h2 class="nombre-1">Alquimify</h2>
+                <h1 id="titulo-principal">Marketing Digital</h1>
+            </figure>
+
+            <!-- Menú principal -->
+            <nav class="menu-principal" id="menu-principal">
+
+                    <a href="index.html">Inicio</a>
+                    <a href="#">Servicios</a>
+                    <button class="boton boton1" id="boton1" onclick="mostrarMenu(); location.href='#aside'">Pedir Asesoría</button>
+                
+            </nav>
+
+        </header>
+
+        <section class="intro-servicios">
+
+            <h3>Servicios de marketing que se adaptan a las necesidades de tu negocio.</h3>
+
+            <h4>Contratación sin <i>riesgos</i></h4>
+
+            <ul>
+                <li>No te haremos firmar un contrato a largo plazo.</li>
+                <li>Si en algún momento deseas dejar de trabajar con nosotros, tan solo necesitas avisarnos
+                    con 30 días de anticipación.</li>
+                <li>En ese tiempo, nos aseguraremos de finalizar tareas pendientes y de hacer el traspaso de 
+                    actividades a tu equipo.</li>
+            </ul>
+
+
+        </section>
+
+        <section class="zona-servicios">
+
+            <div class="recuadro web">
+                <h4>Tu hogar en la web</h4>
+                <ul>
+                    <li>Sitio Web.</li>
+                    <li>Tienda Online.</li>
+                    <li>Páginas de aterrizaje.</li>
+                </ul>
+
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
+
+            <div class="recuadro publicidad">
+                <h4>Campañas publicitarias online</h4>
+                <ul>
+                    <li>Anuncios en redes sociales.
+                        <ul>
+                            <li class="sublista">Instagram</li>
+                            <li class="sublista">Facebook</li>
+                        </ul>
+                    </li>
+                    <li>Anuncios en google.</li>
+                </ul>
+
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
+
+            <div class="recuadro contenidos">
+                <h4>Estrategia de contenidos</h4>
+                <ul>
+                    <li>Para empresas.</li>
+                    <li>Para profesionales.</li>
+                </ul>
+
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
+
+            <div class="recuadro redes">
+                <h4>Community management</h4>
+                <ul>
+                    <li>Manejo de redes sociales corporativas.</li>
+                </ul>
+
+                <button class="consultar" onclick="location.href='#aside'">CONSULTAR</button>
+            </div>
+
+        </section>
+
+        <section class="proximamente">
+
+            <h5>Próximamente...</h5>
+
+            <div class="audiovisual">
+                <p>Producción audiovisual y diseño gráfico.</p>
+            </div>
+            <div class="automatico">
+                <p>Marketing automático / Email marketing</p>
+            </div>
+
+        </section>
+
+    <!-- Formulario -->
+
+     <aside class="aside" id="aside">
+
+        <h3>Descubrí cual es el plan correcto para tu negocio</h3>
+        <span>Dejanos tus datos, te estaremos contactando durante las próximas 48 horas.</span>
+
+        <form action="" name="formulario" id="formulario">
+
+            <div class="grupo">
+                <label for="campo_nombre">Nombre</label>
+                <input type="text" name="Nombre" id="campo_nombre" class="caja_texto" required>    
+            </div>
+
+            
+            <div class="grupo">
+                <label for="campo_apellido">Apellido</label>
+                <input type="text" name="Apellido" id="campo_apellido" class="caja_texto" required>
+            </div>
+            
+            <div class="grupo">
+                <label for="campo_empresa">Empresa</label>
+                <input type="text" name="Empresa" id="campo_empresa" class="caja_texto" required>
+            </div>
+
+            <div class="grupo">
+                <label for="campo_telefono">Teléfono</label>
+                <input type="text" name="Telefono" id="campo_telefono" class="caja_texto" required>
+            </div>
+
+            <div class="grupo">
+                <label for="campo_email">Email</label>
+                <input type="email" name="Email" id="campo_email" class="caja_texto" required>
+            </div>
+
+            <div class="grupo">
+                <label for="campo_url">URL</label>
+                <input type="text" name="Url" id="campo_url" class="caja_texto">
+            </div>
+
+            <div class="grupo penultimo_grupo">
+                <label for="campo_pais">País</label>
+                <select name="Pais" id="campo_pais" class="caja_texto" required>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Bolivia">Argentina</option>
+                    <option value="Chile">Bolivia</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="España">España</option>
+                    <option value="Mexico">México</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Republica Dominicana">República Dominicana</option>
+                    <option value="Uruguay">Uruguay</option>
+                    <option value="Venezuela">Venezuela</option>
+                </select>
+            </div>
+
+            
+         <div class="grupo ultimo_grupo">
+            <label for="campo_descripcion">Descripción</label>
+            <textarea name="Descripcion" id="campo_descripcion" cols="37" rows="7"></textarea>
+         </div>
+
+        <input type="submit" value="Contáctenme" name="boton_enviar" class="boton" id="boton_enviar">
+
+         <div class="espaciado"></div>
+
+        </form>
+
+    </aside>
+
+    <footer class="footer" id="footer">
+
+        
+        <figure class="logo-2">
+            <img src="imagenes/logo.png" alt="Logo">
+        </figure>
+
+        <div class="texto-footer">
+
+        <div class="derechos">
+            <span>©Alquimify 2020 - Todos los derechos reservados.</span>
+        </div>
+
+        <div class="creditos">
+            <a href="https://stories.freepik.com">Illustrations by Freepik Stories</a>
+        </div>
+
+        </div>
+
+
+        <div class="sociales">
+        <!--<i class="icon-linkedin"></i>-->
+        <a href="https://www.instagram.com/alquimify/?hl=es-la" target="_blank" class="icon-instagram"></a>
+        <!--<i class="icon-facebook"></i>-->
+        <span>Conecta con nosotros</span>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="scripts/servicios.js"></script>
+    <script src="scripts/formulario.js"></script>
+
+</body>
+</html>
